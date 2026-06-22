@@ -1,0 +1,37 @@
+# --- Adjust during discovery once C# vs GDScript is confirmed ---
+
+# .NET / C# build output (if mods are C#/.NET assemblies referencing STS2.dll)
+bin/
+obj/
+*.user
+*.suo
+*.cache
+
+# Godot
+.godot/
+.import/
+*.tmp
+
+# Packaged mod uploads (keep SOURCE in git, ignore built/zipped artifacts)
+dist/
+*.zip
+*.pck
+
+# Secrets / credentials (none expected for a mod, kept defensively)
+.env
+*.pfx
+*.snk
+
+# IDE
+.vs/
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs / scratch
+*.log
+scratch/
