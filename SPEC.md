@@ -363,3 +363,28 @@ safe core.
   pile manipulation, or **any RNG** in the cross-player effect. These touch card-pile / turn-flow /
   RNG state where desync risk is materially higher; prove one mechanic at a time, don't batch them
   into the synergy set on the spike's word alone.
+
+---
+
+## 13. Phase 3 — 墩墩 character skeleton (single-player)
+
+Built from the official `alchyrsts2charmod` template pattern:
+- `Dundun : PlaceholderCharacterModel` — `PlaceholderID "ironclad"` borrows the Ironclad combat visuals,
+  so 墩墩 is **solo-playable with placeholder art, no custom-animation work**. `StartingHp 75`,
+  `MaxEnergy 3`, warm-orange name/color. Pools: `DundunCardPool` (card color + energy icons),
+  `DundunRelicPool`, `DundunPotionPool`.
+- Starter deck: **5× DundunStrike** (deal 6, AnyEnemy) + **5× DundunDefend** (Block 5, Self) — all
+  **deterministic, single-player safe**. Starting relic `BurningBlood` (placeholder).
+- Placeholder art copied from the template (`charui/` select/icon/map-marker; card/power/relic fallbacks);
+  path helpers in `Extensions/StringExtensions.cs`; `MainFile.ResPath = res://DundunDudu`.
+- Chinese localization packed into the pck: `characters.json` (title/pronouns/description/flavor/banter),
+  `cards.json`, `ancients.json` (Architect-dialogue placeholders) — eng + zhs. Note: a full character
+  requires ~15 flavor/dialogue keys (the analyzer enumerates them; provided as Chinese placeholders).
+
+**Phase 3 boundaries (enforced):**
+- **No cross-player logic** anywhere in 墩墩's kit — starter cards are Self/AnyEnemy only.
+- **嘟嘟 is Phase 4** (not built yet).
+- **双人连携 / 在一起 synergy is Phase 5**, gated on the **live co-op spike PASS** (Phase 2). The
+  TogetherGuard/SelfGuard spike cards stay temporary and are NOT in 墩墩's pool/deck.
+- Goal: solo — select 墩墩 → start a run → play basic cards. Build 0/0; loads clean via the smoke
+  harness; the interactive select/start/play pass is a quick **single-player** check (no partner needed).

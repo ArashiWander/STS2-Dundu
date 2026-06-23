@@ -8,7 +8,8 @@ namespace DundunDudu.DundunDuduCode;
 [ModInitializer(nameof(Initialize))]
 public partial class MainFile : Node
 {
-    public const string ModId = "DundunDudu"; //At the moment, this is used only for the Logger and harmony names.
+    public const string ModId = "DundunDudu"; //Logger + harmony names, and the res:// asset root.
+    public const string ResPath = $"res://{ModId}"; //Asset root inside the .pck (must match manifest id / pck_name).
 
     public static MegaCrit.Sts2.Core.Logging.Logger Logger { get; } = new(ModId, MegaCrit.Sts2.Core.Logging.LogType.Generic);
 

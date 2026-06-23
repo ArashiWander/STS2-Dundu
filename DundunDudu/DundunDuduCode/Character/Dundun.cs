@@ -1,0 +1,64 @@
+using BaseLib.Abstracts;
+using BaseLib.Utils.NodeFactories;
+using DundunDudu.DundunDuduCode.Cards;
+using DundunDudu.DundunDuduCode.Extensions;
+using Godot;
+using MegaCrit.Sts2.Core.Entities.Characters;
+using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Relics;
+
+namespace DundunDudu.DundunDuduCode.Character;
+
+/// <summary>
+/// 墩墩 — Phase 3 character skeleton. PlaceholderCharacterModel borrows the Ironclad combat visuals
+/// (PlaceholderID = "ironclad") so the character is fully solo-playable with placeholder art, before any
+/// custom animation work. Starter deck is all-deterministic and single-player safe (no cross-player logic;
+/// that is Phase 5 after the live co-op spike PASSes).
+/// </summary>
+public class Dundun : PlaceholderCharacterModel
+{
+    public const string CharacterId = "Dundun";
+
+    public static readonly Color Color = new("e8743b"); // 墩墩 warm orange (placeholder; tune in Phase 6)
+
+    public override Color NameColor => Color;
+    public override CharacterGender Gender => CharacterGender.Neutral;
+    public override int StartingHp => 75;
+    public override int MaxEnergy => 3;
+
+    public override IEnumerable<MegaCrit.Sts2.Core.Models.CardModel> StartingDeck =>
+    [
+        ModelDb.Card<DundunStrike>(),
+        ModelDb.Card<DundunStrike>(),
+        ModelDb.Card<DundunStrike>(),
+        ModelDb.Card<DundunStrike>(),
+        ModelDb.Card<DundunStrike>(),
+        ModelDb.Card<DundunDefend>(),
+        ModelDb.Card<DundunDefend>(),
+        ModelDb.Card<DundunDefend>(),
+        ModelDb.Card<DundunDefend>(),
+        ModelDb.Card<DundunDefend>()
+    ];
+
+    public override IReadOnlyList<RelicModel> StartingRelics => [ModelDb.Relic<BurningBlood>()];
+
+    public override CardPoolModel CardPool => ModelDb.CardPool<DundunCardPool>();
+    public override RelicPoolModel RelicPool => ModelDb.RelicPool<DundunRelicPool>();
+    public override PotionPoolModel PotionPool => ModelDb.PotionPool<DundunPotionPool>();
+
+    // Placeholder select-screen / icon / map-marker art (from the Character template's charui assets).
+    public override Control CustomIcon
+    {
+        get
+        {
+            var icon = NodeFactory<Control>.CreateFromResource(CustomIconTexturePath);
+            icon.SetAnchorsAndOffsetsPreset(Control.LayoutPreset.FullRect);
+            return icon;
+        }
+    }
+
+    public override string CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();
+    public override string CustomCharacterSelectIconPath => "char_select_char_name.png".CharacterUiPath();
+    public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
+    public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
+}
