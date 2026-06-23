@@ -311,4 +311,40 @@ Workshop release, single-player balance tuning as the primary mode. All deferred
 4. **Install MegaDot v4.5.1 now**; **skip `PckPacker`** (§7). `GodotPath` →
    `C:/megadot/MegaDot_v4.5.1-stable_mono_win64.exe`.
 5. **Git remote:** `origin = https://github.com/ArashiWander/sts2-mod-uploader.git`,
-   tracking `main`.
+   tracking `main`. (Kept local-only for now — the remote holds the separate mod-uploader tool.)
+
+---
+
+## 12. Phase 2 progress — co-op spike (code half done; live test pending)
+
+**Route A is implemented and proven at the code level (0.107.1):**
+- The mechanism is a card with **`TargetType.AnyAlly`** (verified `TargetType.cs`: "any player
+  excluding itself"). `OnPlay` calls `CreatureCmd.GainBlock(cardPlay.Target, DynamicVars.Block,
+  cardPlay)` — block applied to the *selected partner's* creature. BaseLib's
+  `AnyPlayerCardTargetingHelper` + Harmony patches on `CardModel.IsValidTarget` /
+  `NCardPlay.TryPlayCard` make AnyAlly selectable on the partner in MP; the card play rides the
+  game's synchronized action queue (lockstep), and Block is core combat state synced by
+  `CombatStateSynchronizer`.
+- Spike card: `DundunDudu/DundunDuduCode/Spike/TogetherGuardSpikeCard.cs` (TEMP; removed/replaced
+  in Phase 5). **Compiles 0/0** and **loads clean in-game** (autonomous smoke PASS, 0 runtime errors).
+- Net-message route (`ICustomMessage` + `CustomMessageWrapper.Send`, namespaces in the
+  `multiplayer_networking` guide) documented but **not used in v1** (Route B deferred to v2 per §11.2).
+
+**Live verification (the actual Phase 2 gate) is PENDING** — needs two instances + a partner:
+see `tools/coop-spike-test.md` (steps, pass criteria, desync log markers). If Route A fails to
+replicate cleanly / desyncs, that's STOP-and-report (may reshape the mechanic), not auto-fallthrough.
+
+**New known-unknowns surfaced (resolve in Phase 3 before real card content):**
+- **BaseLib analyzer `STS001` localization-file format** not yet cracked — a correctly-keyed
+  `localization/spike.json` was NOT picked up; suppressed via `#pragma` for the throwaway spike.
+  Every real card needs working localization, so the JSON schema/wiring must be solved in Phase 3.
+- **`autoAdd` `CustomCardModel` REQUIRES a `[Pool(...)]` at runtime** — analyzer `STS004` is only a
+  warning, but BaseLib **throws at startup** without a pool. Every real card needs a pool
+  (`ColorlessCardPool` or our character pools).
+
+**Tooling status (decision A — don't fix MCPTest):**
+- `tools/smoke.ps1` = autonomous load-smoke (launch → parse `godot.log` → close). Used throughout
+  Phase 1/2; it caught the missing-`[Pool]` runtime throw that the build had passed.
+- MCPTest deep-automation bridge stays unfixed (0.107.1 API drift). For future auto-stress
+  (e.g. desync regression), evaluate **GodotExplorer** (loads clean on 0.107.1) or a thin custom
+  harness before touching MCPTest's brittle API surface.
