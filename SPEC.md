@@ -299,11 +299,16 @@ Workshop release, single-player balance tuning as the primary mode. All deferred
 
 ---
 
-## 11. Decisions needed from Yemin (surfaced, not decided)
+## 11. Decisions (settled 2026-06-23 by Yemin)
 
-1. **One mod hosting both characters?** (recommended, §3.)
-2. **Co-op route:** approve Route A primary / Route B fallback for the Phase 2 spike (§6)?
-3. **Attach the STS2 Modding Assistant MCP?** (§8 — new dependency, ASK.)
-4. **MegaDot v4.5.1 install** now, or try `PckPacker` first to defer it? (§7.)
-5. **Git remote:** none exists. Provide an `origin` URL (or confirm local-only commits
-   for now)?
+1. **One mod, both characters.** Confirmed (§3). Project: `DundunDudu/`.
+2. **v1 synergy = Route A only** (in-combat partner targeting via the synchronized action
+   queue). **Route B (custom net messages) deferred to v2.** Phase 2 builds and proves
+   Route A; if Route A cannot apply to the partner cleanly, that is a STOP-and-report, not
+   an automatic fall-through to B in v1 (§6).
+3. **Attach `sts2-modding-mcp`** — but first run its `decompile_game` against **0.107.1**
+   and confirm a clean decompile; **keep the manual dotnet build working regardless** (§8).
+4. **Install MegaDot v4.5.1 now**; **skip `PckPacker`** (§7). `GodotPath` →
+   `C:/megadot/MegaDot_v4.5.1-stable_mono_win64.exe`.
+5. **Git remote:** `origin = https://github.com/ArashiWander/sts2-mod-uploader.git`,
+   tracking `main`.
