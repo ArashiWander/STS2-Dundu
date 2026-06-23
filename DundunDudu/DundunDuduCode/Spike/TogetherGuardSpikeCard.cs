@@ -6,11 +6,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.CardPools;
 
-// TEMP spike card: suppress BaseLib analyzer gates that don't matter for a throwaway co-op proof.
-//   STS001 = localization entry required (real cards get proper loc in Phase 3/6; see localization/spike.json).
-//   STS004 = card not added to a pool (intentional — added via dev console `card` for the test).
-#pragma warning disable STS001, STS004
-
 namespace DundunDudu.DundunDuduCode.Spike;
 
 /// <summary>

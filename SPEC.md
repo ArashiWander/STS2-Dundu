@@ -348,3 +348,18 @@ replicate cleanly / desyncs, that's STOP-and-report (may reshape the mechanic), 
 - MCPTest deep-automation bridge stays unfixed (0.107.1 API drift). For future auto-stress
   (e.g. desync regression), evaluate **GodotExplorer** (loads clean on 0.107.1) or a thin custom
   harness before touching MCPTest's brittle API surface.
+
+### v1 synergy guardrail — what the spike proves, and what stays out until separately verified
+
+The spike proves **only the deterministic cross-player pipeline**: a *fixed* amount of Block
+applied to the ally's creature via the synchronized card-play / combat-action queue. That is the
+safe core.
+
+- **v1 双人连携 uses ONLY deterministic commands** whose effect value is known at play time and
+  applied straight to the target via `CreatureCmd` / `PowerCmd`: **Block, fixed Strength/Dexterity,
+  fixed-value buffs/powers**. No branching on per-client state.
+- **Deferred — NOT allowed in a v1 cross-player card until each is individually proven MP-safe in a
+  real co-op lobby:** giving the teammate **card draw**, **energy** (can trigger reshuffles),
+  pile manipulation, or **any RNG** in the cross-player effect. These touch card-pile / turn-flow /
+  RNG state where desync risk is materially higher; prove one mechanic at a time, don't batch them
+  into the synergy set on the spike's word alone.

@@ -1,11 +1,12 @@
 ﻿{
   "id": "DundunDudu",
+  "pck_name": "DundunDudu",
   "name": "墩墩 & 嘟嘟",
   "author": "Yemin",
   "description": "墩墩与嘟嘟 —— 双人连携 co-op 角色 mod（开发中 v0.1，占位）",
   "version": "v0.1.0",
   "min_game_version": "0.107.1",
-  "has_pck": false,
+  "has_pck": true,
   "has_dll": true,
   "dependencies": [
     {"id": "BaseLib", "min_version": "3.3.2"}
