@@ -388,3 +388,26 @@ Built from the official `alchyrsts2charmod` template pattern:
   TogetherGuard/SelfGuard spike cards stay temporary and are NOT in 墩墩's pool/deck.
 - Goal: solo — select 墩墩 → start a run → play basic cards. Build 0/0; loads clean via the smoke
   harness; the interactive select/start/play pass is a quick **single-player** check (no partner needed).
+
+---
+
+## 14. Phase 4 — 嘟嘟 character skeleton (single-player)
+
+Same mould as 墩墩 (§13); agility / combo / low-cost-setup theme, complementing 墩墩's tanky base:
+- `Dudu : PlaceholderCharacterModel`, `PlaceholderID "silent"` — borrows Silent's lighter combat visuals
+  (distinct silhouette vs 墩墩's ironclad; no charui override, so the placeholder art differs naturally).
+  `StartingHp 65` (squishier), `MaxEnergy 3`, **teal** color (deliberate contrast to 墩墩's warm orange).
+  Pools: `DuduCardPool` / `DuduRelicPool` / `DuduPotionPool`.
+- Starter deck — **all deterministic, single-player safe**: 5× DuduStrike (deal 5, AnyEnemy) +
+  4× DuduDefend (Block 4, Self) + 1× **DuduNimble** (0-cost, +1 Dexterity, Self — the agile setup
+  signature that scales the low-block deck). Starting relic `RingOfTheSnake` (Silent's draw-on-turn-1;
+  fits the "setup" feel). Rough balance only — not tuned.
+- Chinese loc added to the same tables (characters/cards/ancients, eng+zhs); 嘟嘟 = 她 (CC). All cards `[Pool]`.
+- Verified: build **0/0**, pck packs loc+art (gdre-confirmed), smoke loads clean (0 errors).
+- Toolchain: added `DundunDudu.sln` → clears the Godot "no solution" export warning and stops the pck
+  from bundling loose `.cs` source (publish now runs `update_scripts_classes`).
+
+**Phase 4 boundaries (enforced):**
+- **Zero cross-player logic** in 嘟嘟's kit (Self/AnyEnemy only). **墩墩 untouched.**
+- **双人连携 / 在一起 synergy is Phase 5**, gated on the live co-op spike PASS (Phase 2).
+- Solo select/start/play is the user's single-player check.

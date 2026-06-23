@@ -13,5 +13,21 @@
   "DUNDUNDUDU-DUNDUN.eventDeathPrevention": "（占位）墩墩还不能倒下……",
   "DUNDUNDUDU-DUNDUN.aromaPrinciple": "（占位）……",
   "DUNDUNDUDU-DUNDUN.banter.alive.endTurnPing": "（占位）交给我！",
-  "DUNDUNDUDU-DUNDUN.banter.dead.endTurnPing": "……"
+  "DUNDUNDUDU-DUNDUN.banter.dead.endTurnPing": "……",
+
+  "DUNDUNDUDU-DUDU.title": "嘟嘟",
+  "DUNDUNDUDU-DUDU.titleObject": "嘟嘟",
+  "DUNDUNDUDU-DUDU.pronounSubject": "她",
+  "DUNDUNDUDU-DUDU.pronounObject": "她",
+  "DUNDUNDUDU-DUDU.pronounPossessive": "她的",
+  "DUNDUNDUDU-DUDU.possessiveAdjective": "她的",
+  "DUNDUNDUDU-DUDU.description": "嘟嘟 —— 轻巧灵动的另一半。\n[i]（占位骨架，v0.1）[/i]",
+  "DUNDUNDUDU-DUDU.cardsModifierTitle": "嘟嘟的卡牌",
+  "DUNDUNDUDU-DUDU.cardsModifierDescription": "嘟嘟的卡牌会出现在奖励和商店中。",
+  "DUNDUNDUDU-DUDU.unlockText": "嘟嘟已准备好！",
+  "DUNDUNDUDU-DUDU.goldMonologue": "（占位）金子？拿着拿着～",
+  "DUNDUNDUDU-DUDU.eventDeathPrevention": "（占位）嘟嘟才不要倒下……",
+  "DUNDUNDUDU-DUDU.aromaPrinciple": "（占位）……",
+  "DUNDUNDUDU-DUDU.banter.alive.endTurnPing": "（占位）看我的！",
+  "DUNDUNDUDU-DUDU.banter.dead.endTurnPing": "……"
 }

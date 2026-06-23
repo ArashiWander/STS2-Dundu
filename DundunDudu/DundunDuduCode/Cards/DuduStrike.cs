@@ -7,10 +7,10 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace DundunDudu.DundunDuduCode.Cards;
 
-/// <summary>墩墩 basic Strike — deal fixed damage to one enemy. Deterministic, single-player safe.</summary>
-public sealed class DundunStrike() : DundunCard(1, CardType.Attack, CardRarity.Basic, TargetType.AnyEnemy)
+/// <summary>嘟嘟 basic Strike — light, cheap hit. Deterministic, single-player safe.</summary>
+public sealed class DuduStrike() : DuduCard(1, CardType.Attack, CardRarity.Basic, TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(6m, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(5m, ValueProp.Move)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -21,5 +21,5 @@ public sealed class DundunStrike() : DundunCard(1, CardType.Attack, CardRarity.B
             .Execute(choiceContext);
     }
 
-    protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(3m);
+    protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(2m);
 }

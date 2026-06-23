@@ -6,5 +6,11 @@
   "DUNDUNDUDU-DUNDUN_STRIKE.title": "墩墩猛击",
   "DUNDUNDUDU-DUNDUN_STRIKE.description": "造成 [blue]{Damage}[/blue] 点伤害。",
   "DUNDUNDUDU-DUNDUN_DEFEND.title": "墩墩防御",
-  "DUNDUNDUDU-DUNDUN_DEFEND.description": "获得 [blue]{Block}[/blue] 点[gold]格挡[/gold]。"
+  "DUNDUNDUDU-DUNDUN_DEFEND.description": "获得 [blue]{Block}[/blue] 点[gold]格挡[/gold]。",
+  "DUNDUNDUDU-DUDU_STRIKE.title": "嘟嘟轻击",
+  "DUNDUNDUDU-DUDU_STRIKE.description": "造成 [blue]{Damage}[/blue] 点伤害。",
+  "DUNDUNDUDU-DUDU_DEFEND.title": "嘟嘟轻避",
+  "DUNDUNDUDU-DUDU_DEFEND.description": "获得 [blue]{Block}[/blue] 点[gold]格挡[/gold]。",
+  "DUNDUNDUDU-DUDU_NIMBLE.title": "嘟嘟灵巧",
+  "DUNDUNDUDU-DUDU_NIMBLE.description": "获得 [blue]{DexterityPower}[/blue] 点[gold]敏捷[/gold]。"
 }
