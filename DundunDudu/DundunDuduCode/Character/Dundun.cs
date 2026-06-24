@@ -26,18 +26,28 @@ public class Dundun : PlaceholderCharacterModel
     public override int StartingHp => 75;
     public override int MaxEnergy => 3;
 
+    // TEMP "sampler" starting deck: one of every 墩墩 Cheap card, so the new design can be experienced
+    // immediately in a solo run. Revert to a real basic starter (e.g. 5x Strike + 5x Defend) for balance later.
     public override IEnumerable<MegaCrit.Sts2.Core.Models.CardModel> StartingDeck =>
     [
-        ModelDb.Card<DundunStrike>(),
-        ModelDb.Card<DundunStrike>(),
-        ModelDb.Card<DundunStrike>(),
-        ModelDb.Card<DundunStrike>(),
-        ModelDb.Card<DundunStrike>(),
-        ModelDb.Card<DundunDefend>(),
-        ModelDb.Card<DundunDefend>(),
-        ModelDb.Card<DundunDefend>(),
-        ModelDb.Card<DundunDefend>(),
-        ModelDb.Card<DundunDefend>()
+        ModelDb.Card<Grip>(),
+        ModelDb.Card<NourishingSoup>(),
+        ModelDb.Card<SteadyPunch>(),
+        ModelDb.Card<Grapple>(),
+        ModelDb.Card<Reserve>(),
+        ModelDb.Card<Wellness>(),
+        ModelDb.Card<DefensiveStep>(),
+        ModelDb.Card<Backhand>(),
+        ModelDb.Card<SlowSimmer>(),
+        ModelDb.Card<Hedge>(),
+        ModelDb.Card<RiskControl>(),
+        ModelDb.Card<Counterplay>(),
+        ModelDb.Card<BarbedArmor>(),
+        ModelDb.Card<SustainedDefense>(),
+        ModelDb.Card<DoubleKick>(),
+        ModelDb.Card<IronWall>(),
+        ModelDb.Card<StillWater>(),
+        ModelDb.Card<GrandFeast>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics => [ModelDb.Relic<BurningBlood>()];
@@ -61,4 +71,10 @@ public class Dundun : PlaceholderCharacterModel
     public override string CustomCharacterSelectIconPath => "char_select_char_name.png".CharacterUiPath();
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
+
+    // Thorough placeholder: drop the borrowed Ironclad-themed select background and card trail (null = the
+    // CustomCharacterModel base default, so it's safe — the game shows its neutral default instead). The combat
+    // model (CustomVisualPath via PlaceholderID) is intentionally kept; real art swaps in later.
+    public override string CustomCharacterSelectBg => null!;
+    public override string CustomTrailPath => null!;
 }

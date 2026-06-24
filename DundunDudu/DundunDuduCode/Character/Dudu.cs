@@ -1,5 +1,7 @@
 using BaseLib.Abstracts;
+using BaseLib.Utils.NodeFactories;
 using DundunDudu.DundunDuduCode.Cards;
+using DundunDudu.DundunDuduCode.Extensions;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
@@ -27,18 +29,28 @@ public class Dudu : PlaceholderCharacterModel
     public override int StartingHp => 65;
     public override int MaxEnergy => 3;
 
+    // TEMP "sampler" starting deck: one of every 嘟嘟 Cheap card (+ the Dexterity enabler 灵巧), so the new
+    // design can be experienced immediately solo. Revert to a real basic starter for balance later.
     public override IEnumerable<MegaCrit.Sts2.Core.Models.CardModel> StartingDeck =>
     [
-        ModelDb.Card<DuduStrike>(),
-        ModelDb.Card<DuduStrike>(),
-        ModelDb.Card<DuduStrike>(),
-        ModelDb.Card<DuduStrike>(),
-        ModelDb.Card<DuduStrike>(),
-        ModelDb.Card<DuduDefend>(),
-        ModelDb.Card<DuduDefend>(),
-        ModelDb.Card<DuduDefend>(),
-        ModelDb.Card<DuduDefend>(),
-        ModelDb.Card<DuduNimble>()
+        ModelDb.Card<DuduNimble>(),
+        ModelDb.Card<Peckish>(),
+        ModelDb.Card<Poke>(),
+        ModelDb.Card<TwoBites>(),
+        ModelDb.Card<GuardFood>(),
+        ModelDb.Card<PretendShare>(),
+        ModelDb.Card<ExtraServing>(),
+        ModelDb.Card<HugBowl>(),
+        ModelDb.Card<Appetizer>(),
+        ModelDb.Card<EatAndWatch>(),
+        ModelDb.Card<GrabDish>(),
+        ModelDb.Card<Whirlwind>(),
+        ModelDb.Card<Feast>(),
+        ModelDb.Card<SweepBuffet>(),
+        ModelDb.Card<EatAndGrab>(),
+        ModelDb.Card<BigMeal>(),
+        ModelDb.Card<Fearless>(),
+        ModelDb.Card<RevengeEating>()
     ];
 
     // RingOfTheSnake (Silent's starter: draw extra on turn 1) fits the low-cost "setup" feel. Placeholder.
@@ -48,6 +60,24 @@ public class Dudu : PlaceholderCharacterModel
     public override RelicPoolModel RelicPool => ModelDb.RelicPool<DuduRelicPool>();
     public override PotionPoolModel PotionPool => ModelDb.PotionPool<DuduPotionPool>();
 
-    // No charui art overrides: inherits Silent's placeholder select/icon/map art via PlaceholderID,
-    // which gives a distinct silhouette from 墩墩 (whose overrides use the generic template art).
+    // Thorough placeholder: use our generic placeholder select/icon/map textures (NOT Silent's face), and drop
+    // the borrowed Silent-themed select background and card trail (null = base default, safe). The combat model
+    // (CustomVisualPath via PlaceholderID "silent") is intentionally kept; real art swaps in later.
+    public override Control CustomIcon
+    {
+        get
+        {
+            var icon = NodeFactory<Control>.CreateFromResource(CustomIconTexturePath);
+            icon.SetAnchorsAndOffsetsPreset(Control.LayoutPreset.FullRect);
+            return icon;
+        }
+    }
+
+    public override string CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();
+    public override string CustomCharacterSelectIconPath => "char_select_char_name.png".CharacterUiPath();
+    public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
+    public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
+
+    public override string CustomCharacterSelectBg => null!;
+    public override string CustomTrailPath => null!;
 }
