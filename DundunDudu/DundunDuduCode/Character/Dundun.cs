@@ -72,9 +72,8 @@ public class Dundun : PlaceholderCharacterModel
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
 
-    // Thorough placeholder: drop the borrowed Ironclad-themed select background and card trail (null = the
-    // CustomCharacterModel base default, so it's safe — the game shows its neutral default instead). The combat
-    // model (CustomVisualPath via PlaceholderID) is intentionally kept; real art swaps in later.
+    // Placeholder: drop the borrowed Ironclad-themed select background (null = CustomCharacterModel base default,
+    // safe — game shows its neutral default). CustomTrailPath is KEPT (inherits PlaceholderID): it's functional
+    // — the card-movement trail that drives the shuffle/draw animation, not a "background image". Model kept too.
     public override string CustomCharacterSelectBg => null!;
-    public override string CustomTrailPath => null!;
 }

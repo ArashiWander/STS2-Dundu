@@ -78,6 +78,6 @@ public class Dudu : PlaceholderCharacterModel
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
 
+    // CustomTrailPath KEPT (inherits PlaceholderID) — functional card-movement/shuffle animation, not a background.
     public override string CustomCharacterSelectBg => null!;
-    public override string CustomTrailPath => null!;
 }
