@@ -33,7 +33,19 @@ Card design + feasibility triage. CC builds from the triaged tables here. **Buil
 - **Medium** — needs a small custom power (`CustomPowerModel`, no Harmony).
 - **Expensive** — needs a Harmony patch / new system. Flag before committing.
 
-## 墩墩 cards — Thorns-retaliation + heavy-sustain tank (生活梗 flavor)
+## 墩墩 cards — ⚠ REDESIGNED (情绪天平 / 残影·蓄力·熟悉), plan pending approval
+
+**墩墩 is being rebuilt around CC's full design** (`墩墩角色Mod设计文档1.md`): 情绪天平【闷气 0–10】+ 熬大夜 debuff
++ three tribute archetypes 残影(太空步) / 蓄力(巨剑) / 熟悉(格斗), 猪饲料·麦霸·兴趣 card families, 情侣(连携) cards,
+and 玩偶遗物. This **supersedes** the old Thorns-retaliation 墩墩 below. Engineering plan, API mapping, feasibility,
+and the salvage/cut list for the 18 built cards: **`Dundun SPEC.md`** (build order `Dundun Build Plan.md`).
+
+Status: **plan only — no code yet** (awaiting approval). Validated vs the 0.107.1 decompile: the whole design is
+**Cheap/Medium, zero Expensive** (5 custom powers via PowerModel hooks; 穿透=`ValueProp.Unblockable`; 迟钝=`SlowPower`;
+猪饲料/麦霸 = `ModCardTagRegistry` custom tags). 18 built cards: **hard-cut 3 Thorns (反手回击/见招拆招/倒刺护甲),
+salvage 12 (reskin in P3), optional-cut 3** — delete nothing until Yemin confirms (list in Dundun SPEC §4).
+
+<details><summary>Superseded — old Thorns-retaliation 墩墩 pool (kept for the salvage mapping)</summary>
 
 Identity: stand and reflect — **Thorns is the primary win-con** (scales via 以彼之道), survive on Block + heavy
 Regen/heal, soften with Weak / Buffer / Intangible. 3 Medium signatures carry the identity. Small attack backbone
@@ -67,6 +79,8 @@ Regen/heal, soften with Weak / Buffer / Intangible. 3 Medium signatures carry th
 
 ★ 防守垫步：原设计「本回合已出技能则9」。0.107.1 无 Cheap 的「本回合出牌数」环境读取（只有遗物/power 用钩子自己计数），
 故改写为等价的 Cheap 自身状态条件「若你已有格挡」。不是 power，仍 Cheap。
+
+</details>
 
 ## 嘟嘟 cards — multi-hit combo / agile / 干饭(嘴馋) flavor
 
