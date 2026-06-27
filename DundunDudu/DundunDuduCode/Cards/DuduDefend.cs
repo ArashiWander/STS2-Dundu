@@ -14,6 +14,9 @@ public sealed class DuduDefend() : DuduCard(1, CardType.Skill, CardRarity.Basic,
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(4m, ValueProp.Move)];
 
+    // Basic Defend tag — paired with DuduStrike's Strike tag so Strike/Defend-referencing content resolves.
+    protected override HashSet<CardTag> CanonicalTags => [CardTag.Defend];
+
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);

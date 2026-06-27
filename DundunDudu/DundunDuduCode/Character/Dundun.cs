@@ -26,24 +26,22 @@ public class Dundun : PlaceholderCharacterModel
     public override int StartingHp => 75;
     public override int MaxEnergy => 3;
 
-    // TEMP "sampler" starting deck: one of every 墩墩 Cheap card, so the new design can be experienced
-    // immediately in a solo run. Revert to a real basic starter (e.g. 5x Strike + 5x Defend) for balance later.
+    // Real basic starter (5x Strike + 4x Defend) + 2x SulkTestCard so the 闷气 tier-scaling is testable solo.
+    // The 12 cheap cards + rares live in DundunCardPool and come from card rewards / the in-game `card` console —
+    // they are intentionally NOT pre-loaded into the opening hand. SulkTestCard is TEMP (remove after P1a verify).
     public override IEnumerable<MegaCrit.Sts2.Core.Models.CardModel> StartingDeck =>
     [
+        ModelDb.Card<DundunStrike>(),
+        ModelDb.Card<DundunStrike>(),
+        ModelDb.Card<DundunStrike>(),
+        ModelDb.Card<DundunStrike>(),
+        ModelDb.Card<DundunStrike>(),
+        ModelDb.Card<DundunDefend>(),
+        ModelDb.Card<DundunDefend>(),
+        ModelDb.Card<DundunDefend>(),
+        ModelDb.Card<DundunDefend>(),
         ModelDb.Card<SulkTestCard>(),
-        ModelDb.Card<SulkTestCard>(),
-        ModelDb.Card<Grip>(),
-        ModelDb.Card<NourishingSoup>(),
-        ModelDb.Card<SteadyPunch>(),
-        ModelDb.Card<Grapple>(),
-        ModelDb.Card<Reserve>(),
-        ModelDb.Card<Wellness>(),
-        ModelDb.Card<DefensiveStep>(),
-        ModelDb.Card<Hedge>(),
-        ModelDb.Card<RiskControl>(),
-        ModelDb.Card<SustainedDefense>(),
-        ModelDb.Card<DoubleKick>(),
-        ModelDb.Card<GrandFeast>()
+        ModelDb.Card<SulkTestCard>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics => [ModelDb.Relic<BurningBlood>()];

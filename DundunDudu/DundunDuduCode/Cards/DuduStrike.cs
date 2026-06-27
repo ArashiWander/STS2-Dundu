@@ -12,6 +12,9 @@ public sealed class DuduStrike() : DuduCard(1, CardType.Attack, CardRarity.Basic
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(5m, ValueProp.Move)];
 
+    // Basic Strike tag — required for Strike-referencing content (e.g. LargeCapsule); without it, runs crash.
+    protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
+
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         ArgumentNullException.ThrowIfNull(cardPlay.Target);

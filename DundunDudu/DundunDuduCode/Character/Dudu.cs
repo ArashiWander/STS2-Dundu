@@ -29,28 +29,20 @@ public class Dudu : PlaceholderCharacterModel
     public override int StartingHp => 65;
     public override int MaxEnergy => 3;
 
-    // TEMP "sampler" starting deck: one of every 嘟嘟 Cheap card (+ the Dexterity enabler 灵巧), so the new
-    // design can be experienced immediately solo. Revert to a real basic starter for balance later.
+    // Real basic starter: 4x Strike + 4x Defend + 1x 灵巧 (the Dexterity enabler, agile identity). The 17 cheap
+    // cards + rares live in DuduCardPool and come from card rewards / the in-game `card` console — not pre-loaded
+    // into the opening hand. (Reverted from the earlier sampler deck for the same reason as 墩墩.)
     public override IEnumerable<MegaCrit.Sts2.Core.Models.CardModel> StartingDeck =>
     [
-        ModelDb.Card<DuduNimble>(),
-        ModelDb.Card<Peckish>(),
-        ModelDb.Card<Poke>(),
-        ModelDb.Card<TwoBites>(),
-        ModelDb.Card<GuardFood>(),
-        ModelDb.Card<PretendShare>(),
-        ModelDb.Card<ExtraServing>(),
-        ModelDb.Card<HugBowl>(),
-        ModelDb.Card<Appetizer>(),
-        ModelDb.Card<EatAndWatch>(),
-        ModelDb.Card<GrabDish>(),
-        ModelDb.Card<Whirlwind>(),
-        ModelDb.Card<Feast>(),
-        ModelDb.Card<SweepBuffet>(),
-        ModelDb.Card<EatAndGrab>(),
-        ModelDb.Card<BigMeal>(),
-        ModelDb.Card<Fearless>(),
-        ModelDb.Card<RevengeEating>()
+        ModelDb.Card<DuduStrike>(),
+        ModelDb.Card<DuduStrike>(),
+        ModelDb.Card<DuduStrike>(),
+        ModelDb.Card<DuduStrike>(),
+        ModelDb.Card<DuduDefend>(),
+        ModelDb.Card<DuduDefend>(),
+        ModelDb.Card<DuduDefend>(),
+        ModelDb.Card<DuduDefend>(),
+        ModelDb.Card<DuduNimble>()
     ];
 
     // RingOfTheSnake (Silent's starter: draw extra on turn 1) fits the low-cost "setup" feel. Placeholder.

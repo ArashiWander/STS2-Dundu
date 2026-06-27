@@ -14,6 +14,9 @@ public sealed class DundunDefend() : DundunCard(1, CardType.Skill, CardRarity.Ba
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(5m, ValueProp.Move)];
 
+    // Basic Defend tag — paired with DundunStrike's Strike tag so Strike/Defend-referencing content resolves.
+    protected override HashSet<CardTag> CanonicalTags => [CardTag.Defend];
+
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);

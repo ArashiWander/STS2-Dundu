@@ -12,6 +12,10 @@ public sealed class DundunStrike() : DundunCard(1, CardType.Attack, CardRarity.B
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(6m, ValueProp.Move)];
 
+    // The game identifies a character's basic Strike via this tag (e.g. LargeCapsule, Strike-referencing content).
+    // Without it, RelicModel.LargeCapsule.GetStrikeForCharacter's First(Basic && Strike) throws at obtain → run crash.
+    protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
+
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         ArgumentNullException.ThrowIfNull(cardPlay.Target);
