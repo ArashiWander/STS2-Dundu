@@ -56,6 +56,13 @@
   "DUNDUNDUDU-GRACEFUL_TURN.title": "华丽转身",
   "DUNDUNDUDU-GRACEFUL_TURN.description": "造成 [blue]{Damage}[/blue] 点伤害，然后获得 1 层[gold]残影[/gold]。",
 
+  "DUNDUNDUDU-HEAVY_STEP.title": "沉重步伐",
+  "DUNDUNDUDU-HEAVY_STEP.description": "获得 [blue]{Block}[/blue] 点[gold]格挡[/gold]，抽 1 张牌。",
+  "DUNDUNDUDU-CLEAVE_ALL.title": "斩断一切",
+  "DUNDUNDUDU-CLEAVE_ALL.description": "消耗全部[gold]蓄力[/gold]；造成 [blue]{Damage}[/blue] 点伤害，每消耗 1 层额外 +4。",
+  "DUNDUNDUDU-LAST_STAND.title": "绝境坚持",
+  "DUNDUNDUDU-LAST_STAND.description": "生命低于 30% 时，你的攻击牌伤害 +30%。",
+
   "DUNDUNDUDU-PECKISH.title": "嘴馋",
   "DUNDUNDUDU-PECKISH.description": "抽 1 张牌。",
   "DUNDUNDUDU-POKE.title": "戳一口",

@@ -83,5 +83,24 @@ Eq("Perfect(1)", AfterimageMath.PerfectLandingDamage(1), 6);
 Eq("Perfect(3)", AfterimageMath.PerfectLandingDamage(3), 18);
 Eq("Perfect(5)", AfterimageMath.PerfectLandingDamage(5), 30);
 
+Console.WriteLine("== ChargeMath.SlashAllDamage (8 + 4*stacks) ==");
+Eq("Slash(0)", ChargeMath.SlashAllDamage(0), 8);
+Eq("Slash(1)", ChargeMath.SlashAllDamage(1), 12);
+Eq("Slash(3)", ChargeMath.SlashAllDamage(3), 20);
+Eq("Slash(5)", ChargeMath.SlashAllDamage(5), 28);
+Eq("Slash(-1→0)", ChargeMath.SlashAllDamage(-1), 8);
+
+Console.WriteLine("== LastStandMath.IsDesperate (strictly < 30% max HP) ==");
+Eq("Desperate(29,100)", LastStandMath.IsDesperate(29, 100), true);
+Eq("Desperate(30,100)", LastStandMath.IsDesperate(30, 100), false);
+Eq("Desperate(31,100)", LastStandMath.IsDesperate(31, 100), false);
+Eq("Desperate(0,100)", LastStandMath.IsDesperate(0, 100), true);
+Eq("Desperate(100,100)", LastStandMath.IsDesperate(100, 100), false);
+Eq("Desperate(22,75)", LastStandMath.IsDesperate(22, 75), true);
+Eq("Desperate(23,75)", LastStandMath.IsDesperate(23, 75), false);
+Eq("Desperate(0,0)", LastStandMath.IsDesperate(0, 0), false);
+Eq("Mult(29,100)", LastStandMath.DamageMultiplier(29, 100), 1.3m);
+Eq("Mult(30,100)", LastStandMath.DamageMultiplier(30, 100), 1.0m);
+
 Console.WriteLine($"\n{total - failures}/{total} passed, {failures} failed.");
 return failures == 0 ? 0 : 1;

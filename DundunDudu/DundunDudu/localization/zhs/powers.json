@@ -4,5 +4,11 @@
   "DUNDUNDUDU-SULKING_POWER.smartDescription": "情绪资源，当前 {Amount} 层。3–5 攻击 +50%，6+ 翻倍，6–9 免疫负面，9 回合始受 1 穿透，10 回合末受 3 穿透。",
   "DUNDUNDUDU-AFTERIMAGE_STACKS_POWER.title": "残影",
   "DUNDUNDUDU-AFTERIMAGE_STACKS_POWER.description": "受到攻击伤害时，消耗 1 层完全抵消本次伤害（不论数值大小）。回合结束清空未使用的层数。",
-  "DUNDUNDUDU-AFTERIMAGE_STACKS_POWER.smartDescription": "受到攻击伤害时，消耗 1 层完全抵消本次伤害（不论数值大小）。当前 {Amount} 层，回合结束清空。"
+  "DUNDUNDUDU-AFTERIMAGE_STACKS_POWER.smartDescription": "受到攻击伤害时，消耗 1 层完全抵消本次伤害（不论数值大小）。当前 {Amount} 层，回合结束清空。",
+  "DUNDUNDUDU-CHARGE_POWER.title": "蓄力",
+  "DUNDUNDUDU-CHARGE_POWER.description": "你的回合内若未打出攻击牌，回合结束时获得 1 层。跨回合保留，需主动消耗。",
+  "DUNDUNDUDU-CHARGE_POWER.smartDescription": "你的回合内若未打出攻击牌，回合结束时 +1。当前 {Amount} 层，跨回合保留。",
+  "DUNDUNDUDU-LAST_STAND_POWER.title": "绝境坚持",
+  "DUNDUNDUDU-LAST_STAND_POWER.description": "当生命低于最大生命的 30% 时，你的攻击牌伤害 +30%。",
+  "DUNDUNDUDU-LAST_STAND_POWER.smartDescription": "当生命低于最大生命的 30% 时，你的攻击牌伤害 +30%。"
 }

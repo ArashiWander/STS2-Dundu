@@ -18,6 +18,8 @@
     <!-- Link (don't reference) the pure logic under test. Same source, separate assembly, no game dependency. -->
     <Compile Include="..\DundunDudu\DundunDuduCode\Logic\SulkingMath.cs" />
     <Compile Include="..\DundunDudu\DundunDuduCode\Logic\AfterimageMath.cs" />
+    <Compile Include="..\DundunDudu\DundunDuduCode\Logic\ChargeMath.cs" />
+    <Compile Include="..\DundunDudu\DundunDuduCode\Logic\LastStandMath.cs" />
   </ItemGroup>
 
 </Project>

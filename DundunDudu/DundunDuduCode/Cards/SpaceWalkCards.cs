@@ -1,8 +1,6 @@
+using DundunDudu.DundunDuduCode.Extensions;
 using DundunDudu.DundunDuduCode.Logic;
 using DundunDudu.DundunDuduCode.Powers;
-using MegaCrit.Sts2.Core.Combat;
-using MegaCrit.Sts2.Core.Combat.History;
-using MegaCrit.Sts2.Core.Combat.History.Entries;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -51,8 +49,7 @@ public sealed class Spotlight() : DundunCard(1, CardType.Skill, CardRarity.Uncom
     protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(6m, ValueProp.Move)];
     protected override async Task OnPlay(PlayerChoiceContext ctx, CardPlay cardPlay)
     {
-        bool playedAttack = CombatManager.Instance.History.Entries.OfType<CardPlayStartedEntry>().Any(e =>
-            e.CardPlay.Card.Type == CardType.Attack && e.CardPlay.Card.Owner.Creature == Owner.Creature && e.HappenedThisTurn(base.CombatState!));
+        bool playedAttack = CombatHistory.AttacksPlayedThisTurn(Owner.Creature, base.CombatState!) > 0;
         decimal block = playedAttack ? 9m : DynamicVars.Block.BaseValue;
         await CreatureCmd.GainBlock(Owner.Creature, block, ValueProp.Move, cardPlay);
     }
