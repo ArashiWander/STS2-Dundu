@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Self-contained pure-logic test runner. ZERO NuGet / game / Godot deps: it just links the pure formula
+       source files from the mod and asserts their boundaries, then exits non-zero on any failure.
+       Run: dotnet run inside tests/ (or pass the project path).
+       Lives OUTSIDE DundunDudu/ so the mod's Godot SDK glob never compiles test code into the mod dll. -->
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>DundunDudu.Tests</AssemblyName>
+    <RootNamespace>DundunDudu.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Link (don't reference) the pure logic under test. Same source, separate assembly, no game dependency. -->
+    <Compile Include="..\DundunDudu\DundunDuduCode\Logic\SulkingMath.cs" />
+  </ItemGroup>
+
+</Project>

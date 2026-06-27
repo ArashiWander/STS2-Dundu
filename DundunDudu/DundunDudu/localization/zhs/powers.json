@@ -1,5 +1,5 @@
 {
   "DUNDUNDUDU-SULKING_POWER.title": "闷气",
-  "DUNDUNDUDU-SULKING_POWER.description": "情绪资源（0–10 层）。3–5 层时你的攻击伤害 +50%；6 层及以上翻倍。",
-  "DUNDUNDUDU-SULKING_POWER.smartDescription": "情绪资源，当前 {Amount} 层。3–5 层攻击 +50%，6 层及以上翻倍。"
+  "DUNDUNDUDU-SULKING_POWER.description": "情绪资源（0–10 层）。3–5 层攻击伤害 +50%；6 层及以上翻倍。6–9 层免疫负面状态。9 层回合开始受 1 点穿透伤害；10 层回合结束受 3 点穿透伤害。",
+  "DUNDUNDUDU-SULKING_POWER.smartDescription": "情绪资源，当前 {Amount} 层。3–5 攻击 +50%，6+ 翻倍，6–9 免疫负面，9 回合始受 1 穿透，10 回合末受 3 穿透。"
 }

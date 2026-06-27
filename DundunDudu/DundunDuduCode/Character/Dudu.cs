@@ -70,6 +70,7 @@ public class Dudu : PlaceholderCharacterModel
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
 
-    // CustomTrailPath KEPT (inherits PlaceholderID) — functional card-movement/shuffle animation, not a background.
-    public override string CustomCharacterSelectBg => null!;
+    // Select-screen background + card trail: inherit PlaceholderCharacterModel's (char_select_bg_silent, a real
+    // existing scene). Returning null made the game look for a char_select_bg_dundundudu-dudu.tscn we don't ship
+    // → load [ERROR]. Ship a custom bg scene later (real-art phase) to drop the borrowed one.
 }

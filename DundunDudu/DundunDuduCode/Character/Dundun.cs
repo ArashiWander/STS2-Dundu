@@ -66,8 +66,8 @@ public class Dundun : PlaceholderCharacterModel
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
 
-    // Placeholder: drop the borrowed Ironclad-themed select background (null = CustomCharacterModel base default,
-    // safe — game shows its neutral default). CustomTrailPath is KEPT (inherits PlaceholderID): it's functional
-    // — the card-movement trail that drives the shuffle/draw animation, not a "background image". Model kept too.
-    public override string CustomCharacterSelectBg => null!;
+    // Select-screen background + card trail: inherit PlaceholderCharacterModel's (char_select_bg_{PlaceholderID},
+    // a real existing scene). Returning null made the game look for char_select_bg_dundundudu-dundun.tscn (which
+    // we don't ship) → load [ERROR]; inheriting the placeholder bg is part of the same borrow as the ironclad
+    // combat visuals. Ship a custom bg scene later (real-art phase) to truly drop the borrowed one.
 }
