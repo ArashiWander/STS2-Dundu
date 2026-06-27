@@ -146,5 +146,20 @@ Console.WriteLine("== KaraokeMath.HighNoteDamage (16, or 22 if no skill played t
 Eq("HighNote(playedSkill)", KaraokeMath.HighNoteDamage(true), 16);
 Eq("HighNote(noSkill)", KaraokeMath.HighNoteDamage(false), 22);
 
+Console.WriteLine("== SleepDeprivedMath.BlockReduction (min(stacks, block), floored 0) ==");
+Eq("BlockRed(0,5)", SleepDeprivedMath.BlockReduction(0, 5), 0);
+Eq("BlockRed(3,5)", SleepDeprivedMath.BlockReduction(3, 5), 3);
+Eq("BlockRed(8,5)", SleepDeprivedMath.BlockReduction(8, 5), 5);
+Eq("BlockRed(2,5)", SleepDeprivedMath.BlockReduction(2, 5), 2);
+Eq("BlockRed(3,2)", SleepDeprivedMath.BlockReduction(3, 2), 2);
+Eq("BlockRed(-1,5)", SleepDeprivedMath.BlockReduction(-1, 5), 0);
+Eq("BlockRed(3,-1)", SleepDeprivedMath.BlockReduction(3, -1), 0);
+
+Console.WriteLine("== SleepDeprivedMath.GivesSulking (>=3) ==");
+Eq("GivesSulking(2)", SleepDeprivedMath.GivesSulking(2), false);
+Eq("GivesSulking(3)", SleepDeprivedMath.GivesSulking(3), true);
+Eq("GivesSulking(10)", SleepDeprivedMath.GivesSulking(10), true);
+Eq("GivesSulking(0)", SleepDeprivedMath.GivesSulking(0), false);
+
 Console.WriteLine($"\n{total - failures}/{total} passed, {failures} failed.");
 return failures == 0 ? 0 : 1;

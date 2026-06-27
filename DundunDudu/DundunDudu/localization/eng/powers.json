@@ -16,5 +16,8 @@
   "DUNDUNDUDU-FAMILIAR_POWER.smartDescription": "受到未格挡伤害时获得 1 层。攻击牌伤害 +1/层（千锤百炼时 +2/层）。当前 {Amount} 层。",
   "DUNDUNDUDU-TEMPERED_POWER.title": "千锤百炼",
   "DUNDUNDUDU-TEMPERED_POWER.description": "本场战斗中，【熟悉】提供的攻击加成翻倍（+2/层）。",
-  "DUNDUNDUDU-TEMPERED_POWER.smartDescription": "本场战斗中，【熟悉】提供的攻击加成翻倍（+2/层）。"
+  "DUNDUNDUDU-TEMPERED_POWER.smartDescription": "本场战斗中，【熟悉】提供的攻击加成翻倍（+2/层）。",
+  "DUNDUNDUDU-SLEEP_DEPRIVED_POWER.title": "熬大夜",
+  "DUNDUNDUDU-SLEEP_DEPRIVED_POWER.description": "你本回合打出的下一张格挡牌效果按层数降低（最低0）。回合结束 -1 层。当层数≥3时，回合开始额外获得 1 层[gold]闷气[/gold]。",
+  "DUNDUNDUDU-SLEEP_DEPRIVED_POWER.smartDescription": "本回合下一张格挡牌效果 -{Amount}（最低0）。回合末 -1 层。≥3 层时回合开始 +1 闷气。当前 {Amount} 层。"
 }

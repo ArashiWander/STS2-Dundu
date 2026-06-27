@@ -40,4 +40,11 @@ public static class CombatHistory
                         && e.CardPlay.Card.Type == CardType.Skill
                         && e.CardPlay.Card.GainsBlock
                         && e.HappenedThisTurn(combatState));
+
+    /// <summary>How many block-granting cards (any type) <paramref name="owner"/> has played THIS turn.</summary>
+    public static int BlockCardsPlayedThisTurn(Creature owner, ICombatState combatState)
+        => CombatManager.Instance.History.Entries.OfType<CardPlayStartedEntry>()
+            .Count(e => e.CardPlay.Card.Owner.Creature == owner
+                        && e.CardPlay.Card.GainsBlock
+                        && e.HappenedThisTurn(combatState));
 }
