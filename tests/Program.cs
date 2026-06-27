@@ -125,5 +125,22 @@ Eq("Combo(blk,a1,b1)", RelicMath.ComboCompleted(false, true, 1, 1), true);
 Eq("Combo(blk,a0,b1)", RelicMath.ComboCompleted(false, true, 0, 1), false);
 Eq("Combo(blk,a1,b2)", RelicMath.ComboCompleted(false, true, 1, 2), false);
 
+Console.WriteLine("== StarterMath.BigButtDamage (6, +3 at 闷气>=3) ==");
+Eq("BigButt(0)", StarterMath.BigButtDamage(0), 6);
+Eq("BigButt(2)", StarterMath.BigButtDamage(2), 6);
+Eq("BigButt(3)", StarterMath.BigButtDamage(3), 9);
+Eq("BigButt(10)", StarterMath.BigButtDamage(10), 9);
+Eq("BigButt(-1)", StarterMath.BigButtDamage(-1), 6);
+
+Console.WriteLine("== StarterMath.SteadfastBlock (5 + 2 per 3 闷气, cap +6) ==");
+Eq("Steadfast(0)", StarterMath.SteadfastBlock(0), 5);
+Eq("Steadfast(2)", StarterMath.SteadfastBlock(2), 5);
+Eq("Steadfast(3)", StarterMath.SteadfastBlock(3), 7);
+Eq("Steadfast(5)", StarterMath.SteadfastBlock(5), 7);
+Eq("Steadfast(6)", StarterMath.SteadfastBlock(6), 9);
+Eq("Steadfast(9)", StarterMath.SteadfastBlock(9), 11);
+Eq("Steadfast(10)", StarterMath.SteadfastBlock(10), 11);
+Eq("Steadfast(-1)", StarterMath.SteadfastBlock(-1), 5);
+
 Console.WriteLine($"\n{total - failures}/{total} passed, {failures} failed.");
 return failures == 0 ? 0 : 1;

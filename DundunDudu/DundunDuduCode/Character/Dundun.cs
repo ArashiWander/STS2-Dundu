@@ -31,15 +31,15 @@ public class Dundun : PlaceholderCharacterModel
     // they are intentionally NOT pre-loaded into the opening hand. SulkTestCard is TEMP (remove after P1a verify).
     public override IEnumerable<MegaCrit.Sts2.Core.Models.CardModel> StartingDeck =>
     [
-        ModelDb.Card<DundunStrike>(),
-        ModelDb.Card<DundunStrike>(),
-        ModelDb.Card<DundunStrike>(),
-        ModelDb.Card<DundunStrike>(),
-        ModelDb.Card<DundunStrike>(),
-        ModelDb.Card<DundunDefend>(),
-        ModelDb.Card<DundunDefend>(),
-        ModelDb.Card<DundunDefend>(),
-        ModelDb.Card<DundunDefend>(),
+        ModelDb.Card<BigButt>(),
+        ModelDb.Card<BigButt>(),
+        ModelDb.Card<BigButt>(),
+        ModelDb.Card<BigButt>(),
+        ModelDb.Card<BigButt>(),
+        ModelDb.Card<Steadfast>(),
+        ModelDb.Card<Steadfast>(),
+        ModelDb.Card<Steadfast>(),
+        ModelDb.Card<Steadfast>(),
         ModelDb.Card<SulkTestCard>(),
         ModelDb.Card<SulkTestCard>()
     ];

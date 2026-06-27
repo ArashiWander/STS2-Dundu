@@ -4,10 +4,10 @@
   "DUNDUNDUDU-SELF_GUARD_SPIKE_CARD.title": "守护自己",
   "DUNDUNDUDU-SELF_GUARD_SPIKE_CARD.description": "给自己 [blue]{Block}[/blue] 点[gold]格挡[/gold]。",
 
-  "DUNDUNDUDU-DUNDUN_STRIKE.title": "墩墩猛击",
-  "DUNDUNDUDU-DUNDUN_STRIKE.description": "造成 [blue]{Damage}[/blue] 点伤害。",
-  "DUNDUNDUDU-DUNDUN_DEFEND.title": "墩墩防御",
-  "DUNDUNDUDU-DUNDUN_DEFEND.description": "获得 [blue]{Block}[/blue] 点[gold]格挡[/gold]。",
+  "DUNDUNDUDU-BIG_BUTT.title": "大屁墩！",
+  "DUNDUNDUDU-BIG_BUTT.description": "造成 [blue]{Damage}[/blue] 点伤害。若[gold]闷气[/gold]≥3，额外造成 3 点伤害。",
+  "DUNDUNDUDU-STEADFAST.title": "墩坚强",
+  "DUNDUNDUDU-STEADFAST.description": "获得 [blue]{Block}[/blue] 点[gold]格挡[/gold]。每 3 层[gold]闷气[/gold]额外获得 2 点格挡（最多 +6）。",
 
   "DUNDUNDUDU-DUDU_STRIKE.title": "嘟嘟轻击",
   "DUNDUNDUDU-DUDU_STRIKE.description": "造成 [blue]{Damage}[/blue] 点伤害。",

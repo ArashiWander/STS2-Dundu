@@ -22,6 +22,7 @@
     <Compile Include="..\DundunDudu\DundunDuduCode\Logic\LastStandMath.cs" />
     <Compile Include="..\DundunDudu\DundunDuduCode\Logic\FamiliarMath.cs" />
     <Compile Include="..\DundunDudu\DundunDuduCode\Logic\RelicMath.cs" />
+    <Compile Include="..\DundunDudu\DundunDuduCode\Logic\StarterMath.cs" />
   </ItemGroup>
 
 </Project>

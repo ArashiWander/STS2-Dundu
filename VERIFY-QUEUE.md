@@ -68,10 +68,16 @@
 - [ ] **I4 图标**：3 个遗物用占位 relic.png（大图标占位；小图标可能糊/缺，纯美术，后面换真图）。
 - 备注（**本轮未建，依赖缺口**）：小熊虫(首次免死)需 Osty 死亡系统研究；小粉/土豆/小白菜/香烟 依赖 P2(熬大夜)/P3(SNACK·KARAOKE 标签)——这些押后。
 
+## J. 起手 starters（P3a，替换占位 DundunStrike/Defend）
+- [ ] **J1 大屁墩！**：起手有大屁墩（基础攻击）。闷气<3 打 → 6 伤；闷气≥3 → 9 伤。注意卡面预览恒显 6（实际按闷气，打出才 +3）。
+- [ ] **J2 墩坚强**：基础防御。闷气 0–2 → 5 格挡；3–5 → 7；6–8 → 9；9–10 → 11（每 3 层 +2，最多 +6）。预览恒显 5。
+- [ ] **J3 起手组**：5 大屁墩 + 4 墩坚强 + 2 测试卡（共 11）。大屁墩带 Strike 标签、墩坚强带 Defend 标签（LargeCapsule 仍安全）。
+- 备注：P3a 仅建标签**基础设施**（DundunCardTag 枚举 + ITaggedDundunCard 接口 + DundunCardTags 查询；因 BaseLib 3.3.2 无 ModCardTagRegistry，改用 mod 内接口标签）。猪饲料/麦霸标签在 P3b 挂到 reskin 卡上。
+
 ---
 
 ### 墩墩可加卡 Entry 速查（`card DUNDUNDUDU-<SLUG>`）
-猛击 DUNDUN_STRIKE · 防御 DUNDUN_DEFEND · 测试卡 SULK_TEST_CARD
+大屁墩！ BIG_BUTT · 墩坚强 STEADFAST · 测试卡 SULK_TEST_CARD
 抓握点 GRIP · 滋补汤 NOURISHING_SOUP · 稳扎一拳 STEADY_PUNCH · 缠斗 GRAPPLE · 储备 RESERVE · 养生 WELLNESS · 防守垫步 DEFENSIVE_STEP · 对冲 HEDGE · 风控 RISK_CONTROL · 连续防守 SUSTAINED_DEFENSE · 二段蹬腿 DOUBLE_KICK · 满汉全席 GRAND_FEAST
 太空步系列（残影）：凌空倒退 AERIAL_RETREAT · 太空步连切 MOONWALK_SLASH · 镜花水月 MIRROR_IMAGE · 舞台聚光灯 SPOTLIGHT · 完美落地 PERFECT_LANDING · 华丽转身 GRACEFUL_TURN
 巨剑系列（蓄力）：沉重步伐 HEAVY_STEP · 斩断一切 CLEAVE_ALL · 绝境坚持 LAST_STAND
