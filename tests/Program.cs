@@ -102,5 +102,13 @@ Eq("Desperate(0,0)", LastStandMath.IsDesperate(0, 0), false);
 Eq("Mult(29,100)", LastStandMath.DamageMultiplier(29, 100), 1.3m);
 Eq("Mult(30,100)", LastStandMath.DamageMultiplier(30, 100), 1.0m);
 
+Console.WriteLine("== FamiliarMath.Bonus (+1/stack, doubled when tempered) ==");
+Eq("Bonus(0,false)", FamiliarMath.Bonus(0, false), 0);
+Eq("Bonus(3,false)", FamiliarMath.Bonus(3, false), 3);
+Eq("Bonus(3,true)", FamiliarMath.Bonus(3, true), 6);
+Eq("Bonus(5,true)", FamiliarMath.Bonus(5, true), 10);
+Eq("Bonus(0,true)", FamiliarMath.Bonus(0, true), 0);
+Eq("Bonus(-1,false)", FamiliarMath.Bonus(-1, false), 0);
+
 Console.WriteLine($"\n{total - failures}/{total} passed, {failures} failed.");
 return failures == 0 ? 0 : 1;

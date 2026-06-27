@@ -53,9 +53,19 @@
 - [ ] **G5 沉重步伐**：`card DUNDUNDUDU-HEAVY_STEP` → 3 格挡 + 抽 1。
 - [ ] **G6 叠乘**：闷气爆发(×2) + 绝境坚持(×1.3) 同时 → 攻击应 ×2.6（两个乘法 buff 叠乘，确认数值）。
 
+## H. 极限格斗 / 熟悉 + 千锤百炼（P6）
+- [ ] **H1 熟悉获得**：受到**未格挡**伤害（敌人打你掉血，或自伤）→ +1 层[熟悉]。log `[熟悉] 受未格挡伤害 N → +1`。被格挡吸收的伤害**不**加。
+- [ ] **H2 攻击加成**：有 N 层熟悉 → 攻击牌伤害 +N（如稳扎一拳 7 → 7+N）。log `[熟悉] 攻击 +N`。
+- [ ] **H3 千锤百炼**：`card DUNDUNDUDU-TEMPER_HAMMER` 后，熟悉加成翻倍（N 层 → +2N）。log 显示 `千锤百炼=True`。
+- [ ] **H4 以伤换伤**：`card DUNDUNDUDU-BLOOD_FOR_BLOOD` → 对敌 6 伤 + 自身 2 伤 → +1 熟悉。**已知交互**：若此时你有[残影]，自伤会被残影否定 → 不加熟悉（跨 archetype，符合规则，非 bug）。
+- [ ] **H5 野兽之力**：`card DUNDUNDUDU-BEAST_FORCE` → 16 伤。
+- [ ] **H6 加法在乘法前**：熟悉 +N（加法）与 闷气×2 / 绝境×1.3（乘法）→ 伤害应 = (基础+N)×倍率，确认顺序对。
+
 ---
 
 ### 墩墩可加卡 Entry 速查（`card DUNDUNDUDU-<SLUG>`）
 猛击 DUNDUN_STRIKE · 防御 DUNDUN_DEFEND · 测试卡 SULK_TEST_CARD
 抓握点 GRIP · 滋补汤 NOURISHING_SOUP · 稳扎一拳 STEADY_PUNCH · 缠斗 GRAPPLE · 储备 RESERVE · 养生 WELLNESS · 防守垫步 DEFENSIVE_STEP · 对冲 HEDGE · 风控 RISK_CONTROL · 连续防守 SUSTAINED_DEFENSE · 二段蹬腿 DOUBLE_KICK · 满汉全席 GRAND_FEAST
 太空步系列（残影）：凌空倒退 AERIAL_RETREAT · 太空步连切 MOONWALK_SLASH · 镜花水月 MIRROR_IMAGE · 舞台聚光灯 SPOTLIGHT · 完美落地 PERFECT_LANDING · 华丽转身 GRACEFUL_TURN
+巨剑系列（蓄力）：沉重步伐 HEAVY_STEP · 斩断一切 CLEAVE_ALL · 绝境坚持 LAST_STAND
+格斗系列（熟悉）：以伤换伤 BLOOD_FOR_BLOOD · 千锤百炼 TEMPER_HAMMER · 野兽之力 BEAST_FORCE

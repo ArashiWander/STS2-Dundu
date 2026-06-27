@@ -62,6 +62,12 @@
   "DUNDUNDUDU-CLEAVE_ALL.description": "消耗全部[gold]蓄力[/gold]；造成 [blue]{Damage}[/blue] 点伤害，每消耗 1 层额外 +4。",
   "DUNDUNDUDU-LAST_STAND.title": "绝境坚持",
   "DUNDUNDUDU-LAST_STAND.description": "生命低于 30% 时，你的攻击牌伤害 +30%。",
+  "DUNDUNDUDU-BLOOD_FOR_BLOOD.title": "以伤换伤",
+  "DUNDUNDUDU-BLOOD_FOR_BLOOD.description": "造成 [blue]{Damage}[/blue] 点伤害，自身受到 2 点伤害。",
+  "DUNDUNDUDU-TEMPER_HAMMER.title": "千锤百炼",
+  "DUNDUNDUDU-TEMPER_HAMMER.description": "本场战斗中，【熟悉】提供的攻击加成翻倍。",
+  "DUNDUNDUDU-BEAST_FORCE.title": "野兽之力",
+  "DUNDUNDUDU-BEAST_FORCE.description": "造成 [blue]{Damage}[/blue] 点伤害。",
 
   "DUNDUNDUDU-PECKISH.title": "嘴馋",
   "DUNDUNDUDU-PECKISH.description": "抽 1 张牌。",

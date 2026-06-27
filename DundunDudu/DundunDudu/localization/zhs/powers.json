@@ -10,5 +10,11 @@
   "DUNDUNDUDU-CHARGE_POWER.smartDescription": "你的回合内若未打出攻击牌，回合结束时 +1。当前 {Amount} 层，跨回合保留。",
   "DUNDUNDUDU-LAST_STAND_POWER.title": "绝境坚持",
   "DUNDUNDUDU-LAST_STAND_POWER.description": "当生命低于最大生命的 30% 时，你的攻击牌伤害 +30%。",
-  "DUNDUNDUDU-LAST_STAND_POWER.smartDescription": "当生命低于最大生命的 30% 时，你的攻击牌伤害 +30%。"
+  "DUNDUNDUDU-LAST_STAND_POWER.smartDescription": "当生命低于最大生命的 30% 时，你的攻击牌伤害 +30%。",
+  "DUNDUNDUDU-FAMILIAR_POWER.title": "熟悉",
+  "DUNDUNDUDU-FAMILIAR_POWER.description": "受到未格挡伤害时获得 1 层。你的攻击牌伤害 +1/层（【千锤百炼】时 +2/层）。整场战斗保留。",
+  "DUNDUNDUDU-FAMILIAR_POWER.smartDescription": "受到未格挡伤害时获得 1 层。攻击牌伤害 +1/层（千锤百炼时 +2/层）。当前 {Amount} 层。",
+  "DUNDUNDUDU-TEMPERED_POWER.title": "千锤百炼",
+  "DUNDUNDUDU-TEMPERED_POWER.description": "本场战斗中，【熟悉】提供的攻击加成翻倍（+2/层）。",
+  "DUNDUNDUDU-TEMPERED_POWER.smartDescription": "本场战斗中，【熟悉】提供的攻击加成翻倍（+2/层）。"
 }
