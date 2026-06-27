@@ -26,6 +26,13 @@ public static class CombatHistory
                         && e.CardPlay.Resources.EnergyValue == cost
                         && e.HappenedThisTurn(combatState));
 
+    /// <summary>How many skills <paramref name="owner"/> has played THIS turn.</summary>
+    public static int SkillsPlayedThisTurn(Creature owner, ICombatState combatState)
+        => CombatManager.Instance.History.Entries.OfType<CardPlayStartedEntry>()
+            .Count(e => e.CardPlay.Card.Type == CardType.Skill
+                        && e.CardPlay.Card.Owner.Creature == owner
+                        && e.HappenedThisTurn(combatState));
+
     /// <summary>How many block-granting skills <paramref name="owner"/> has played THIS turn.</summary>
     public static int BlockSkillsPlayedThisTurn(Creature owner, ICombatState combatState)
         => CombatManager.Instance.History.Entries.OfType<CardPlayStartedEntry>()

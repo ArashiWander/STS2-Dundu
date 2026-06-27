@@ -23,6 +23,7 @@
     <Compile Include="..\DundunDudu\DundunDuduCode\Logic\FamiliarMath.cs" />
     <Compile Include="..\DundunDudu\DundunDuduCode\Logic\RelicMath.cs" />
     <Compile Include="..\DundunDudu\DundunDuduCode\Logic\StarterMath.cs" />
+    <Compile Include="..\DundunDudu\DundunDuduCode\Logic\KaraokeMath.cs" />
   </ItemGroup>
 
 </Project>

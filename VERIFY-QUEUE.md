@@ -74,11 +74,21 @@
 - [ ] **J3 起手组**：5 大屁墩 + 4 墩坚强 + 2 测试卡（共 11）。大屁墩带 Strike 标签、墩坚强带 Defend 标签（LargeCapsule 仍安全）。
 - 备注：P3a 仅建标签**基础设施**（DundunCardTag 枚举 + ITaggedDundunCard 接口 + DundunCardTags 查询；因 BaseLib 3.3.2 无 ModCardTagRegistry，改用 mod 内接口标签）。猪饲料/麦霸标签在 P3b 挂到 reskin 卡上。
 
+## K. P3b reskin 12 卡（猪饲料/麦霸/兴趣，`card DUNDUNDUDU-<SLUG>`）
+- [ ] **K1 麦霸/Karaoke**：关起门来吼两嗓子(清2闷气+3格挡) · 五音不全也要唱(7伤，闷气≥3 额外清1) · 一个人的卡拉OK(回5+清3闷气) · 副歌大合唱(6伤+全体3) · 高音炫技(16；本回合没出技能牌→22)。
+- [ ] **K2 猪饲料/Snack**：糖醋排骨(回6+清2闷气) · 牛排(下张攻击+4+1闷气) · 蛋饼(0费 清1闷气+抽1) · Pizza(回7+2能量) · Strogonoff(回12+1闷气)。
+- [ ] **K3 兴趣(无标签)**：限定版手办上架(5格挡；已有格挡→8) · 长款皮衣(10格挡+回3)。
+- [ ] **K4 闷气涨/清**：看 log `[闷气] gain ...` / `[闷气] 清空 N 层`；清空不会变负（封在当前层数）。
+- [ ] **K5 标签生效**：P3b 已给猪饲料卡挂 Snack、麦霸卡挂 Karaoke 接口标签；真正**消费**标签的卡/遗物（香烟/小白菜/安可）押后。
+- 简化/偏差（已知）：牛排「+50%」→ VigorPower 固定 +4（近似，BaseLib 无现成「百分比下张攻击」）；限定版手办「本回合未受伤」→「已有格挡」(Cheap proxy)；Strogonoff 的 土豆/迟钝 条款随其遗物押后。
+
 ---
 
 ### 墩墩可加卡 Entry 速查（`card DUNDUNDUDU-<SLUG>`）
 大屁墩！ BIG_BUTT · 墩坚强 STEADFAST · 测试卡 SULK_TEST_CARD
-抓握点 GRIP · 滋补汤 NOURISHING_SOUP · 稳扎一拳 STEADY_PUNCH · 缠斗 GRAPPLE · 储备 RESERVE · 养生 WELLNESS · 防守垫步 DEFENSIVE_STEP · 对冲 HEDGE · 风控 RISK_CONTROL · 连续防守 SUSTAINED_DEFENSE · 二段蹬腿 DOUBLE_KICK · 满汉全席 GRAND_FEAST
+麦霸：关起门来吼两嗓子 SHOUT_IT_OUT · 五音不全也要唱 OFF_KEY_SONG · 一个人的卡拉OK SOLO_KARAOKE · 副歌大合唱 CHORUS_ALL_SING · 高音炫技 HIGH_NOTE
+猪饲料：糖醋排骨 SWEET_SOUR_RIBS · 牛排 STEAK · 蛋饼 EGG_PANCAKE · Pizza PIZZA · Strogonoff STROGONOFF
+兴趣：限定版手办上架 FIGURE_DROP · 长款皮衣 LONG_COAT
 太空步系列（残影）：凌空倒退 AERIAL_RETREAT · 太空步连切 MOONWALK_SLASH · 镜花水月 MIRROR_IMAGE · 舞台聚光灯 SPOTLIGHT · 完美落地 PERFECT_LANDING · 华丽转身 GRACEFUL_TURN
 巨剑系列（蓄力）：沉重步伐 HEAVY_STEP · 斩断一切 CLEAVE_ALL · 绝境坚持 LAST_STAND
 格斗系列（熟悉）：以伤换伤 BLOOD_FOR_BLOOD · 千锤百炼 TEMPER_HAMMER · 野兽之力 BEAST_FORCE

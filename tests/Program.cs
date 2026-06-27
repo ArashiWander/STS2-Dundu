@@ -142,5 +142,9 @@ Eq("Steadfast(9)", StarterMath.SteadfastBlock(9), 11);
 Eq("Steadfast(10)", StarterMath.SteadfastBlock(10), 11);
 Eq("Steadfast(-1)", StarterMath.SteadfastBlock(-1), 5);
 
+Console.WriteLine("== KaraokeMath.HighNoteDamage (16, or 22 if no skill played this turn) ==");
+Eq("HighNote(playedSkill)", KaraokeMath.HighNoteDamage(true), 16);
+Eq("HighNote(noSkill)", KaraokeMath.HighNoteDamage(false), 22);
+
 Console.WriteLine($"\n{total - failures}/{total} passed, {failures} failed.");
 return failures == 0 ? 0 : 1;

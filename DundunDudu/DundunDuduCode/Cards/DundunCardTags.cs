@@ -19,6 +19,10 @@ public interface ITaggedDundunCard
 
 public static class DundunCardTags
 {
+    // Shared single-tag sets so tagged cards don't allocate one per property access.
+    public static readonly IReadOnlySet<DundunCardTag> SnackSet = new HashSet<DundunCardTag> { DundunCardTag.Snack };
+    public static readonly IReadOnlySet<DundunCardTag> KaraokeSet = new HashSet<DundunCardTag> { DundunCardTag.Karaoke };
+
     public static bool Has(CardModel card, DundunCardTag tag) => card is ITaggedDundunCard t && t.DundunTags.Contains(tag);
     public static bool IsSnack(CardModel card) => Has(card, DundunCardTag.Snack);
     public static bool IsKaraoke(CardModel card) => Has(card, DundunCardTag.Karaoke);
