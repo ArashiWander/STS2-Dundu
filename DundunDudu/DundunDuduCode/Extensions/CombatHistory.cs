@@ -18,4 +18,19 @@ public static class CombatHistory
             .Count(e => e.CardPlay.Card.Type == CardType.Attack
                         && e.CardPlay.Card.Owner.Creature == owner
                         && e.HappenedThisTurn(combatState));
+
+    /// <summary>How many cards of a given <paramref name="cost"/> <paramref name="owner"/> has played THIS turn.</summary>
+    public static int CardsPlayedThisTurnWithCost(Creature owner, ICombatState combatState, int cost)
+        => CombatManager.Instance.History.Entries.OfType<CardPlayStartedEntry>()
+            .Count(e => e.CardPlay.Card.Owner.Creature == owner
+                        && e.CardPlay.Resources.EnergyValue == cost
+                        && e.HappenedThisTurn(combatState));
+
+    /// <summary>How many block-granting skills <paramref name="owner"/> has played THIS turn.</summary>
+    public static int BlockSkillsPlayedThisTurn(Creature owner, ICombatState combatState)
+        => CombatManager.Instance.History.Entries.OfType<CardPlayStartedEntry>()
+            .Count(e => e.CardPlay.Card.Owner.Creature == owner
+                        && e.CardPlay.Card.Type == CardType.Skill
+                        && e.CardPlay.Card.GainsBlock
+                        && e.HappenedThisTurn(combatState));
 }

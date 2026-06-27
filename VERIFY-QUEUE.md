@@ -61,6 +61,13 @@
 - [ ] **H5 野兽之力**：`card DUNDUNDUDU-BEAST_FORCE` → 16 伤。
 - [ ] **H6 加法在乘法前**：熟悉 +N（加法）与 闷气×2 / 绝境×1.3（乘法）→ 伤害应 = (基础+N)×倍率，确认顺序对。
 
+## I. 玩偶遗物（P7，结构性 3 个；加遗物：控制台 `relic DUNDUNDUDU-<SLUG>`）
+- [ ] **I1 卡皮吧啦**：`relic DUNDUNDUDU-CAPYBARA`。一回合留 N 点能量不花 → 回合结束 +N 格挡。log `[卡皮吧啦] 回合末剩余能量 N → 格挡 +N`。
+- [ ] **I2 大鼠与美叽**：`relic DUNDUNDUDU-MOUSE_AND_MAGPIE`。一回合打 2 张同费用牌 → 抽 1（4 张再抽 1）。log `[大鼠与美叽]`。
+- [ ] **I3 比比拉不**：`relic DUNDUNDUDU-BIBILABU`。一回合内打 ≥1 攻击牌 + ≥1 提供格挡的技能牌 → +3 格挡（每回合触发一次）。log `[比比拉不] 刀盾连击`。
+- [ ] **I4 图标**：3 个遗物用占位 relic.png（大图标占位；小图标可能糊/缺，纯美术，后面换真图）。
+- 备注（**本轮未建，依赖缺口**）：小熊虫(首次免死)需 Osty 死亡系统研究；小粉/土豆/小白菜/香烟 依赖 P2(熬大夜)/P3(SNACK·KARAOKE 标签)——这些押后。
+
 ---
 
 ### 墩墩可加卡 Entry 速查（`card DUNDUNDUDU-<SLUG>`）
@@ -69,3 +76,6 @@
 太空步系列（残影）：凌空倒退 AERIAL_RETREAT · 太空步连切 MOONWALK_SLASH · 镜花水月 MIRROR_IMAGE · 舞台聚光灯 SPOTLIGHT · 完美落地 PERFECT_LANDING · 华丽转身 GRACEFUL_TURN
 巨剑系列（蓄力）：沉重步伐 HEAVY_STEP · 斩断一切 CLEAVE_ALL · 绝境坚持 LAST_STAND
 格斗系列（熟悉）：以伤换伤 BLOOD_FOR_BLOOD · 千锤百炼 TEMPER_HAMMER · 野兽之力 BEAST_FORCE
+
+### 墩墩可加遗物 Entry 速查（`relic DUNDUNDUDU-<SLUG>`）
+卡皮吧啦 CAPYBARA · 大鼠与美叽 MOUSE_AND_MAGPIE · 比比拉不 BIBILABU

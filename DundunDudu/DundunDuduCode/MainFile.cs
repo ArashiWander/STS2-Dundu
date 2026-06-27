@@ -1,3 +1,6 @@
+using BaseLib.Patches.UI;
+using DundunDudu.DundunDuduCode.Extensions;
+using DundunDudu.DundunDuduCode.Relics;
 using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Modding;
@@ -21,5 +24,15 @@ public partial class MainFile : Node
         Harmony harmony = new(ModId);
 
         harmony.PatchAll();
+
+        // Placeholder icons for our companion relics. BaseLib's relic-image override registry maps each relic type
+        // to png paths (vanilla relics use a sprite atlas; this lets a mod supply plain pngs). Real art later.
+        var relicIcons = new RelicIconData(
+            "relics/relic.png".ImagePath(),          // BigIconPath (tooltip)
+            "relics/relic.png".ImagePath(),          // PackedIconPath (small)
+            "relics/relic_outline.png".ImagePath()); // PackedIconOutlinePath
+        RelicImageOverridePatch.AddOverride<Capybara>(relicIcons);
+        RelicImageOverridePatch.AddOverride<MouseAndMagpie>(relicIcons);
+        RelicImageOverridePatch.AddOverride<Bibilabu>(relicIcons);
     }
 }

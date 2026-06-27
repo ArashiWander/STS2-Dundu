@@ -110,5 +110,20 @@ Eq("Bonus(5,true)", FamiliarMath.Bonus(5, true), 10);
 Eq("Bonus(0,true)", FamiliarMath.Bonus(0, true), 0);
 Eq("Bonus(-1,false)", FamiliarMath.Bonus(-1, false), 0);
 
+Console.WriteLine("== RelicMath.SameCostDraws (大鼠与美叽: even count >=2 draws) ==");
+Eq("SameCost(0)", RelicMath.SameCostDraws(0), false);
+Eq("SameCost(1)", RelicMath.SameCostDraws(1), false);
+Eq("SameCost(2)", RelicMath.SameCostDraws(2), true);
+Eq("SameCost(3)", RelicMath.SameCostDraws(3), false);
+Eq("SameCost(4)", RelicMath.SameCostDraws(4), true);
+
+Console.WriteLine("== RelicMath.ComboCompleted (比比拉不: fires once when attack+block pair completes) ==");
+Eq("Combo(atk,a1,b1)", RelicMath.ComboCompleted(true, false, 1, 1), true);
+Eq("Combo(atk,a1,b0)", RelicMath.ComboCompleted(true, false, 1, 0), false);
+Eq("Combo(atk,a2,b1)", RelicMath.ComboCompleted(true, false, 2, 1), false);
+Eq("Combo(blk,a1,b1)", RelicMath.ComboCompleted(false, true, 1, 1), true);
+Eq("Combo(blk,a0,b1)", RelicMath.ComboCompleted(false, true, 0, 1), false);
+Eq("Combo(blk,a1,b2)", RelicMath.ComboCompleted(false, true, 1, 2), false);
+
 Console.WriteLine($"\n{total - failures}/{total} passed, {failures} failed.");
 return failures == 0 ? 0 : 1;

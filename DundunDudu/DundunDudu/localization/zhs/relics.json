@@ -1,0 +1,11 @@
+{
+  "DUNDUNDUDU-CAPYBARA.title": "卡皮吧啦",
+  "DUNDUNDUDU-CAPYBARA.flavor": "懒洋洋的水豚，把没花完的精力都摊成了软乎乎的防御。",
+  "DUNDUNDUDU-CAPYBARA.description": "回合结束时，每剩余 1 点未使用的能量，获得 1 点[gold]格挡[/gold]。",
+  "DUNDUNDUDU-MOUSE_AND_MAGPIE.title": "大鼠与美叽",
+  "DUNDUNDUDU-MOUSE_AND_MAGPIE.flavor": "一只爱囤东西的大鼠，一只爱亮片的美叽——凑成一对就想再翻一张。",
+  "DUNDUNDUDU-MOUSE_AND_MAGPIE.description": "每当你在一回合内打出 2 张相同费用的牌，抽 1 张牌。",
+  "DUNDUNDUDU-BIBILABU.title": "比比拉不",
+  "DUNDUNDUDU-BIBILABU.flavor": "最爱看「刀盾连击」的那一下。",
+  "DUNDUNDUDU-BIBILABU.description": "当你在同一回合内打出至少 1 张攻击牌和 1 张提供格挡的技能牌时，获得 3 点[gold]格挡[/gold]。"
+}
