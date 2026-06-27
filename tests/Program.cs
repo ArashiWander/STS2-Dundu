@@ -63,5 +63,25 @@ Eq("Meltdown(9)", SulkingMath.MeltdownSelfDamage(9), 0);
 Eq("Meltdown(10)", SulkingMath.MeltdownSelfDamage(10), 3);
 Eq("Meltdown(11→cap)", SulkingMath.MeltdownSelfDamage(11), 3);
 
+Console.WriteLine("== AfterimageMath.HpLostAfter (>=1 hit negated to 0 while stacks remain) ==");
+Eq("HpLost(0,5)", AfterimageMath.HpLostAfter(0, 5m), 5m);
+Eq("HpLost(1,5)", AfterimageMath.HpLostAfter(1, 5m), 0m);
+Eq("HpLost(3,99)", AfterimageMath.HpLostAfter(3, 99m), 0m);
+Eq("HpLost(1,1)", AfterimageMath.HpLostAfter(1, 1m), 0m);
+Eq("HpLost(1,0.9)", AfterimageMath.HpLostAfter(1, 0.9m), 0.9m);
+Eq("HpLost(2,0.5)", AfterimageMath.HpLostAfter(2, 0.5m), 0.5m);
+
+Console.WriteLine("== AfterimageMath.Consumes (one stack per negated hit) ==");
+Eq("Consumes(0,5)", AfterimageMath.Consumes(0, 5m), false);
+Eq("Consumes(1,5)", AfterimageMath.Consumes(1, 5m), true);
+Eq("Consumes(1,0.5)", AfterimageMath.Consumes(1, 0.5m), false);
+Eq("Consumes(2,1)", AfterimageMath.Consumes(2, 1m), true);
+
+Console.WriteLine("== AfterimageMath.PerfectLandingDamage (6/stack, 12 floor) ==");
+Eq("Perfect(0)", AfterimageMath.PerfectLandingDamage(0), 12);
+Eq("Perfect(1)", AfterimageMath.PerfectLandingDamage(1), 6);
+Eq("Perfect(3)", AfterimageMath.PerfectLandingDamage(3), 18);
+Eq("Perfect(5)", AfterimageMath.PerfectLandingDamage(5), 30);
+
 Console.WriteLine($"\n{total - failures}/{total} passed, {failures} failed.");
 return failures == 0 ? 0 : 1;
