@@ -30,6 +30,8 @@ public class Dundun : PlaceholderCharacterModel
     // immediately in a solo run. Revert to a real basic starter (e.g. 5x Strike + 5x Defend) for balance later.
     public override IEnumerable<MegaCrit.Sts2.Core.Models.CardModel> StartingDeck =>
     [
+        ModelDb.Card<SulkTestCard>(),
+        ModelDb.Card<SulkTestCard>(),
         ModelDb.Card<Grip>(),
         ModelDb.Card<NourishingSoup>(),
         ModelDb.Card<SteadyPunch>(),
@@ -37,16 +39,10 @@ public class Dundun : PlaceholderCharacterModel
         ModelDb.Card<Reserve>(),
         ModelDb.Card<Wellness>(),
         ModelDb.Card<DefensiveStep>(),
-        ModelDb.Card<Backhand>(),
-        ModelDb.Card<SlowSimmer>(),
         ModelDb.Card<Hedge>(),
         ModelDb.Card<RiskControl>(),
-        ModelDb.Card<Counterplay>(),
-        ModelDb.Card<BarbedArmor>(),
         ModelDb.Card<SustainedDefense>(),
         ModelDb.Card<DoubleKick>(),
-        ModelDb.Card<IronWall>(),
-        ModelDb.Card<StillWater>(),
         ModelDb.Card<GrandFeast>()
     ];
 
