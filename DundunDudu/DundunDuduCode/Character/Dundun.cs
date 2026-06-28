@@ -2,6 +2,7 @@ using BaseLib.Abstracts;
 using BaseLib.Utils.NodeFactories;
 using DundunDudu.DundunDuduCode.Cards;
 using DundunDudu.DundunDuduCode.Extensions;
+using DundunDudu.DundunDuduCode.Relics;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
@@ -44,7 +45,8 @@ public class Dundun : PlaceholderCharacterModel
         ModelDb.Card<SulkTestCard>()
     ];
 
-    public override IReadOnlyList<RelicModel> StartingRelics => [ModelDb.Relic<BurningBlood>()];
+    // 墩墩's design starter relic is 小熊虫 (first-lethal save). Replaces the placeholder BurningBlood.
+    public override IReadOnlyList<RelicModel> StartingRelics => [ModelDb.Relic<WaterBear>()];
 
     public override CardPoolModel CardPool => ModelDb.CardPool<DundunCardPool>();
     public override RelicPoolModel RelicPool => ModelDb.RelicPool<DundunRelicPool>();

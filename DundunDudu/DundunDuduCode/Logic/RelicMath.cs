@@ -23,4 +23,12 @@ public static class RelicMath
         int d = debt < 0 ? 0 : debt;
         return d < 2 ? d : 2;
     }
+
+    /// <summary>小熊虫: HP healed on the first lethal save — <paramref name="percent"/>% of max HP, at least 1.</summary>
+    public static int LethalReviveHeal(int maxHp, int percent)
+    {
+        int m = maxHp < 0 ? 0 : maxHp;
+        int h = m * percent / 100;
+        return h < 1 ? 1 : h;
+    }
 }

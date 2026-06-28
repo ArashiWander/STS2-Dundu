@@ -184,5 +184,12 @@ Eq("Artifact(8)", SilverSpringMath.ArtifactFromSulking(8), 4);
 Eq("Artifact(10)", SilverSpringMath.ArtifactFromSulking(10), 5);
 Eq("Artifact(-2)", SilverSpringMath.ArtifactFromSulking(-2), 0);
 
+Console.WriteLine("== RelicMath.LethalReviveHeal (小熊虫: percent of max HP, min 1) ==");
+Eq("Revive(100,10)", RelicMath.LethalReviveHeal(100, 10), 10);
+Eq("Revive(75,10)", RelicMath.LethalReviveHeal(75, 10), 7);
+Eq("Revive(200,10)", RelicMath.LethalReviveHeal(200, 10), 20);
+Eq("Revive(5,10)", RelicMath.LethalReviveHeal(5, 10), 1);
+Eq("Revive(0,10)", RelicMath.LethalReviveHeal(0, 10), 1);
+
 Console.WriteLine($"\n{total - failures}/{total} passed, {failures} failed.");
 return failures == 0 ? 0 : 1;

@@ -37,5 +37,6 @@ public partial class MainFile : Node
         RelicImageOverridePatch.AddOverride<BabyBokChoy>(relicIcons);
         RelicImageOverridePatch.AddOverride<XiaoFen>(relicIcons);
         RelicImageOverridePatch.AddOverride<ConfiscatedCigarette>(relicIcons);
+        RelicImageOverridePatch.AddOverride<WaterBear>(relicIcons);
     }
 }

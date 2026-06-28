@@ -106,6 +106,12 @@
 - [ ] **N5 银色山泉**：`card DUNDUNDUDU-SILVER_SPRING`（消耗）→ ①清你全部负面（先用 `power` 加个虚弱/熬大夜再打，确认被清）②闷气减半转等量人工制品（闷气 8 → 剩 4 + 4 人工制品）③本回合打不出攻击牌（试着出攻击牌应被禁）。
 - 偏差（已知）：机械键盘穿透→普通同步随机伤害；黏糊糊→原版 Slimed。
 
+## O. 小熊虫（起始遗物，首次免死）
+- [ ] **O1 起始遗物**：选墩墩开局，起始遗物是【小熊虫】（替换了占位的 BurningBlood）。
+- [ ] **O2 首次免死**：把 HP 打到会致死（或控制台自伤）→ 不死，回复 10% 最大生命（墩墩 75 血 → 7）。log `[小熊虫] 首次免死 → 回复 7`。遗物随后变灰（IsUsedUp / Disabled）。
+- [ ] **O3 一次性**：用过后再受致死伤害 → 正常死亡（不再触发）。
+- 实现：与原版 LizardTail 完全同源（ShouldDieLate 取消死亡 + AfterPreventingDeath 治疗 + [SavedProperty] 标记已用）—— 干净拦截，非硬来。**「首次」= 每个存档/run 一次**（SavedProperty 跨存档持久，仿 LizardTail）；若你想要「每场战斗一次」说一声。
+
 ---
 
 ### 墩墩可加卡 Entry 速查（`card DUNDUNDUDU-<SLUG>`）
@@ -119,4 +125,4 @@ C段特殊：机械键盘 MECH_KEYBOARD · KICK BACK KICK_BACK · 联机游戏 O
 格斗系列（熟悉）：以伤换伤 BLOOD_FOR_BLOOD · 千锤百炼 TEMPER_HAMMER · 野兽之力 BEAST_FORCE
 
 ### 墩墩可加遗物 Entry 速查（`relic DUNDUNDUDU-<SLUG>`）
-卡皮吧啦 CAPYBARA · 大鼠与美叽 MOUSE_AND_MAGPIE · 比比拉不 BIBILABU · 小白菜 BABY_BOK_CHOY · 小粉 XIAO_FEN · 香烟 CONFISCATED_CIGARETTE(Event)
+卡皮吧啦 CAPYBARA · 大鼠与美叽 MOUSE_AND_MAGPIE · 比比拉不 BIBILABU · 小白菜 BABY_BOK_CHOY · 小粉 XIAO_FEN · 香烟 CONFISCATED_CIGARETTE(Event) · 小熊虫 WATER_BEAR(起始)

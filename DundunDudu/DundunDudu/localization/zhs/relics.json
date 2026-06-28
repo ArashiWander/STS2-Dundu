@@ -16,5 +16,8 @@
   "DUNDUNDUDU-XIAO_FEN.description": "每次清空[gold]闷气[/gold]时（无论通过哪种方式），回复 2 点生命。",
   "DUNDUNDUDU-CONFISCATED_CIGARETTE.title": "被嘟嘟没收的香烟",
   "DUNDUNDUDU-CONFISCATED_CIGARETTE.flavor": "「这个不能抽。」——嘟嘟",
-  "DUNDUNDUDU-CONFISCATED_CIGARETTE.description": "每场战斗开始时，最大生命 -6（戒断反应）；每打出 1 张【猪饲料】系卡牌，回复 2 点已损失的最大生命。战斗结束时回满。"
+  "DUNDUNDUDU-CONFISCATED_CIGARETTE.description": "每场战斗开始时，最大生命 -6（戒断反应）；每打出 1 张【猪饲料】系卡牌，回复 2 点已损失的最大生命。战斗结束时回满。",
+  "DUNDUNDUDU-WATER_BEAR.title": "小熊虫",
+  "DUNDUNDUDU-WATER_BEAR.flavor": "据说能在真空和高温里活下来。墩墩的护身符。",
+  "DUNDUNDUDU-WATER_BEAR.description": "首次受到致命伤害时，免于死亡，并回复 [blue]{Heal}[/blue]% 最大生命。"
 }
