@@ -176,5 +176,13 @@ Eq("CigRestore(1)", RelicMath.CigaretteRestore(1), 1);
 Eq("CigRestore(0)", RelicMath.CigaretteRestore(0), 0);
 Eq("CigRestore(-1)", RelicMath.CigaretteRestore(-1), 0);
 
+Console.WriteLine("== SilverSpringMath.ArtifactFromSulking (闷气 halved → artifact) ==");
+Eq("Artifact(0)", SilverSpringMath.ArtifactFromSulking(0), 0);
+Eq("Artifact(1)", SilverSpringMath.ArtifactFromSulking(1), 0);
+Eq("Artifact(5)", SilverSpringMath.ArtifactFromSulking(5), 2);
+Eq("Artifact(8)", SilverSpringMath.ArtifactFromSulking(8), 4);
+Eq("Artifact(10)", SilverSpringMath.ArtifactFromSulking(10), 5);
+Eq("Artifact(-2)", SilverSpringMath.ArtifactFromSulking(-2), 0);
+
 Console.WriteLine($"\n{total - failures}/{total} passed, {failures} failed.");
 return failures == 0 ? 0 : 1;

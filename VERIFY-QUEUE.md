@@ -98,6 +98,14 @@
 - [ ] **M5 续航闭环**：装香烟（开战 -6 上限）→ 打猪饲料（小白菜 +3 血 & 香烟 +2 上限 &（若清气）小粉 +2 血）→「猪饲料续航流」成立。
 - 偏差（已知）：小白菜 +3 生命对**每张**猪饲料触发（含不回血的蛋饼/牛排，简化「回复效果+3」）；小粉的治疗逻辑写在 Sulking.Clear（闷气清空唯一入口）。
 
+## N. C 段特殊卡（`card DUNDUNDUDU-<SLUG>`）
+- [ ] **N1 机械键盘**：`card DUNDUNDUDU-MECH_KEYBOARD`（能力）。之后每打出 4 张牌 → 对随机敌人 8 伤。log `[机械键盘] 清脆敲击`。**注**：穿透简化为普通伤害（builder 无 Unblockable）；无可见计数（每 4 张内部计）。
+- [ ] **N2 KICK BACK**：`card DUNDUNDUDU-KICK_BACK` → 18 伤；抽牌堆里随机洗入 1 张本场耗能 0 的【大屁墩！】（抽到时 0 费打）。
+- [ ] **N3 联机游戏**：`card DUNDUNDUDU-ONLINE_GAMING` → 8 伤 + 1 能量。
+- [ ] **N4 芝士味Dorito**：`card DUNDUNDUDU-CHEESY_DORITO` → +2 能量；抽牌堆洗入 1 张废牌（用原版【粘液 Slimed】当「黏糊糊」）。
+- [ ] **N5 银色山泉**：`card DUNDUNDUDU-SILVER_SPRING`（消耗）→ ①清你全部负面（先用 `power` 加个虚弱/熬大夜再打，确认被清）②闷气减半转等量人工制品（闷气 8 → 剩 4 + 4 人工制品）③本回合打不出攻击牌（试着出攻击牌应被禁）。
+- 偏差（已知）：机械键盘穿透→普通同步随机伤害；黏糊糊→原版 Slimed。
+
 ---
 
 ### 墩墩可加卡 Entry 速查（`card DUNDUNDUDU-<SLUG>`）
@@ -105,6 +113,7 @@
 麦霸：关起门来吼两嗓子 SHOUT_IT_OUT · 五音不全也要唱 OFF_KEY_SONG · 一个人的卡拉OK SOLO_KARAOKE · 副歌大合唱 CHORUS_ALL_SING · 高音炫技 HIGH_NOTE · 安可 ENCORE
 猪饲料：糖醋排骨 SWEET_SOUR_RIBS · 牛排 STEAK · 蛋饼 EGG_PANCAKE · Pizza PIZZA · Strogonoff STROGONOFF
 兴趣：限定版手办上架 FIGURE_DROP · 长款皮衣 LONG_COAT
+C段特殊：机械键盘 MECH_KEYBOARD · KICK BACK KICK_BACK · 联机游戏 ONLINE_GAMING · 芝士味Dorito CHEESY_DORITO · 喷洒银色山泉 SILVER_SPRING
 太空步系列（残影）：凌空倒退 AERIAL_RETREAT · 太空步连切 MOONWALK_SLASH · 镜花水月 MIRROR_IMAGE · 舞台聚光灯 SPOTLIGHT · 完美落地 PERFECT_LANDING · 华丽转身 GRACEFUL_TURN
 巨剑系列（蓄力）：沉重步伐 HEAVY_STEP · 斩断一切 CLEAVE_ALL · 绝境坚持 LAST_STAND
 格斗系列（熟悉）：以伤换伤 BLOOD_FOR_BLOOD · 千锤百炼 TEMPER_HAMMER · 野兽之力 BEAST_FORCE

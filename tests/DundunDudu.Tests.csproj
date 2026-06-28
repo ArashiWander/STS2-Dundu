@@ -25,6 +25,7 @@
     <Compile Include="..\DundunDudu\DundunDuduCode\Logic\StarterMath.cs" />
     <Compile Include="..\DundunDudu\DundunDuduCode\Logic\KaraokeMath.cs" />
     <Compile Include="..\DundunDudu\DundunDuduCode\Logic\SleepDeprivedMath.cs" />
+    <Compile Include="..\DundunDudu\DundunDuduCode\Logic\SilverSpringMath.cs" />
   </ItemGroup>
 
 </Project>
