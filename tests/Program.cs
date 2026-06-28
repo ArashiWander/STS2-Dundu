@@ -161,5 +161,20 @@ Eq("GivesSulking(3)", SleepDeprivedMath.GivesSulking(3), true);
 Eq("GivesSulking(10)", SleepDeprivedMath.GivesSulking(10), true);
 Eq("GivesSulking(0)", SleepDeprivedMath.GivesSulking(0), false);
 
+Console.WriteLine("== RelicMath.HalfHpOrLess (小白菜: <=50% max HP) ==");
+Eq("Half(50,100)", RelicMath.HalfHpOrLess(50, 100), true);
+Eq("Half(51,100)", RelicMath.HalfHpOrLess(51, 100), false);
+Eq("Half(25,100)", RelicMath.HalfHpOrLess(25, 100), true);
+Eq("Half(37,75)", RelicMath.HalfHpOrLess(37, 75), true);
+Eq("Half(38,75)", RelicMath.HalfHpOrLess(38, 75), false);
+Eq("Half(10,0)", RelicMath.HalfHpOrLess(10, 0), false);
+
+Console.WriteLine("== RelicMath.CigaretteRestore (香烟: up to 2, capped by debt) ==");
+Eq("CigRestore(6)", RelicMath.CigaretteRestore(6), 2);
+Eq("CigRestore(2)", RelicMath.CigaretteRestore(2), 2);
+Eq("CigRestore(1)", RelicMath.CigaretteRestore(1), 1);
+Eq("CigRestore(0)", RelicMath.CigaretteRestore(0), 0);
+Eq("CigRestore(-1)", RelicMath.CigaretteRestore(-1), 0);
+
 Console.WriteLine($"\n{total - failures}/{total} passed, {failures} failed.");
 return failures == 0 ? 0 : 1;

@@ -7,5 +7,14 @@
   "DUNDUNDUDU-MOUSE_AND_MAGPIE.description": "每当你在一回合内打出 2 张相同费用的牌，抽 1 张牌。",
   "DUNDUNDUDU-BIBILABU.title": "比比拉不",
   "DUNDUNDUDU-BIBILABU.flavor": "最爱看「刀盾连击」的那一下。",
-  "DUNDUNDUDU-BIBILABU.description": "当你在同一回合内打出至少 1 张攻击牌和 1 张提供格挡的技能牌时，获得 3 点[gold]格挡[/gold]。"
+  "DUNDUNDUDU-BIBILABU.description": "当你在同一回合内打出至少 1 张攻击牌和 1 张提供格挡的技能牌时，获得 3 点[gold]格挡[/gold]。",
+  "DUNDUNDUDU-BABY_BOK_CHOY.title": "小白菜",
+  "DUNDUNDUDU-BABY_BOK_CHOY.flavor": "唯一一口绿色，墩墩勉为其难地接受了。",
+  "DUNDUNDUDU-BABY_BOK_CHOY.description": "每当你打出【猪饲料】系卡牌，回复 3 点生命；若当前生命≤50%，额外清空 2 层[gold]闷气[/gold]。",
+  "DUNDUNDUDU-XIAO_FEN.title": "小粉",
+  "DUNDUNDUDU-XIAO_FEN.flavor": "软乎乎、暖洋洋，气消了一半。",
+  "DUNDUNDUDU-XIAO_FEN.description": "每次清空[gold]闷气[/gold]时（无论通过哪种方式），回复 2 点生命。",
+  "DUNDUNDUDU-CONFISCATED_CIGARETTE.title": "被嘟嘟没收的香烟",
+  "DUNDUNDUDU-CONFISCATED_CIGARETTE.flavor": "「这个不能抽。」——嘟嘟",
+  "DUNDUNDUDU-CONFISCATED_CIGARETTE.description": "每场战斗开始时，最大生命 -6（戒断反应）；每打出 1 张【猪饲料】系卡牌，回复 2 点已损失的最大生命。战斗结束时回满。"
 }

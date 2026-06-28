@@ -34,5 +34,8 @@ public partial class MainFile : Node
         RelicImageOverridePatch.AddOverride<Capybara>(relicIcons);
         RelicImageOverridePatch.AddOverride<MouseAndMagpie>(relicIcons);
         RelicImageOverridePatch.AddOverride<Bibilabu>(relicIcons);
+        RelicImageOverridePatch.AddOverride<BabyBokChoy>(relicIcons);
+        RelicImageOverridePatch.AddOverride<XiaoFen>(relicIcons);
+        RelicImageOverridePatch.AddOverride<ConfiscatedCigarette>(relicIcons);
     }
 }

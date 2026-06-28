@@ -26,6 +26,8 @@
   "DUNDUNDUDU-CHORUS_ALL_SING.description": "造成 [blue]{Damage}[/blue] 点伤害，并对所有敌人造成 3 点伤害。",
   "DUNDUNDUDU-HIGH_NOTE.title": "高音炫技",
   "DUNDUNDUDU-HIGH_NOTE.description": "造成 [blue]{Damage}[/blue] 点伤害。若你本回合未打出过技能牌，改为造成 22 点伤害。",
+  "DUNDUNDUDU-ENCORE.title": "安可",
+  "DUNDUNDUDU-ENCORE.description": "获得 [blue]{Block}[/blue] 点[gold]格挡[/gold]。若你本回合已打出过其他【麦霸】系卡牌，额外获得 4 点格挡。",
   "DUNDUNDUDU-SWEET_SOUR_RIBS.title": "正宗上海本帮糖醋排骨",
   "DUNDUNDUDU-SWEET_SOUR_RIBS.description": "回复 6 点生命，清空 2 层[gold]闷气[/gold]。",
   "DUNDUNDUDU-STEAK.title": "牛排（五分熟）",

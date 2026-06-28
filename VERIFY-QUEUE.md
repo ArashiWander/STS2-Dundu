@@ -90,11 +90,19 @@
 - [ ] **L5 免疫交互**：熬大夜是 Debuff → 闷气 6–9（免疫负面）时加熬大夜会被挡（设计如此）。测试请在闷气<6 时加。
 - 备注：解除手段【银色山泉】属 C 段（未建）；其它给熬大夜的卡/遗物（香烟）押后。当前只能控制台加。
 
+## M. 标签/事件消费遗物 + 安可（`relic DUNDUNDUDU-<SLUG>` / `card DUNDUNDUDU-ENCORE`）
+- [ ] **M1 小白菜**：`relic DUNDUNDUDU-BABY_BOK_CHOY`。打任意【猪饲料】卡 → +3 生命；若当前 HP≤50% → 额外清 2 闷气。log `[小白菜]`。
+- [ ] **M2 小粉**：`relic DUNDUNDUDU-XIAO_FEN`。每次清空闷气（任何方式：猪饲料/麦霸卡）→ +2 生命。log `[小粉] 清空闷气 → +2 生命`。
+- [ ] **M3 香烟**：`relic DUNDUNDUDU-CONFISCATED_CIGARETTE`（Event 稀有度→**不进常规奖励池**，只能 console/事件给）。开战最大生命 -6（满血时会掉 6 现血）；每打 1 张猪饲料 → 回 2 点上限；战斗结束还满剩余。log `[香烟]`。**注意**：战斗末「还满」用 GainMaxHp（带治疗）→ 净 HP 中性，代价是战斗中更脆。
+- [ ] **M4 安可**：`card DUNDUNDUDU-ENCORE`。3 格挡；若本回合已打过**其他**麦霸卡 → +4（共 7）格挡。
+- [ ] **M5 续航闭环**：装香烟（开战 -6 上限）→ 打猪饲料（小白菜 +3 血 & 香烟 +2 上限 &（若清气）小粉 +2 血）→「猪饲料续航流」成立。
+- 偏差（已知）：小白菜 +3 生命对**每张**猪饲料触发（含不回血的蛋饼/牛排，简化「回复效果+3」）；小粉的治疗逻辑写在 Sulking.Clear（闷气清空唯一入口）。
+
 ---
 
 ### 墩墩可加卡 Entry 速查（`card DUNDUNDUDU-<SLUG>`）
 大屁墩！ BIG_BUTT · 墩坚强 STEADFAST · 测试卡 SULK_TEST_CARD
-麦霸：关起门来吼两嗓子 SHOUT_IT_OUT · 五音不全也要唱 OFF_KEY_SONG · 一个人的卡拉OK SOLO_KARAOKE · 副歌大合唱 CHORUS_ALL_SING · 高音炫技 HIGH_NOTE
+麦霸：关起门来吼两嗓子 SHOUT_IT_OUT · 五音不全也要唱 OFF_KEY_SONG · 一个人的卡拉OK SOLO_KARAOKE · 副歌大合唱 CHORUS_ALL_SING · 高音炫技 HIGH_NOTE · 安可 ENCORE
 猪饲料：糖醋排骨 SWEET_SOUR_RIBS · 牛排 STEAK · 蛋饼 EGG_PANCAKE · Pizza PIZZA · Strogonoff STROGONOFF
 兴趣：限定版手办上架 FIGURE_DROP · 长款皮衣 LONG_COAT
 太空步系列（残影）：凌空倒退 AERIAL_RETREAT · 太空步连切 MOONWALK_SLASH · 镜花水月 MIRROR_IMAGE · 舞台聚光灯 SPOTLIGHT · 完美落地 PERFECT_LANDING · 华丽转身 GRACEFUL_TURN
@@ -102,4 +110,4 @@
 格斗系列（熟悉）：以伤换伤 BLOOD_FOR_BLOOD · 千锤百炼 TEMPER_HAMMER · 野兽之力 BEAST_FORCE
 
 ### 墩墩可加遗物 Entry 速查（`relic DUNDUNDUDU-<SLUG>`）
-卡皮吧啦 CAPYBARA · 大鼠与美叽 MOUSE_AND_MAGPIE · 比比拉不 BIBILABU
+卡皮吧啦 CAPYBARA · 大鼠与美叽 MOUSE_AND_MAGPIE · 比比拉不 BIBILABU · 小白菜 BABY_BOK_CHOY · 小粉 XIAO_FEN · 香烟 CONFISCATED_CIGARETTE(Event)

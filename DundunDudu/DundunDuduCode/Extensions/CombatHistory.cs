@@ -1,3 +1,4 @@
+using DundunDudu.DundunDuduCode.Cards;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Combat.History;
 using MegaCrit.Sts2.Core.Combat.History.Entries;
@@ -46,5 +47,13 @@ public static class CombatHistory
         => CombatManager.Instance.History.Entries.OfType<CardPlayStartedEntry>()
             .Count(e => e.CardPlay.Card.Owner.Creature == owner
                         && e.CardPlay.Card.GainsBlock
+                        && e.HappenedThisTurn(combatState));
+
+    /// <summary>How many 麦霸 (Karaoke-tagged) cards <paramref name="owner"/> has played THIS turn (incl. the
+    /// just-started card, since its CardPlayStartedEntry is already in history during OnPlay).</summary>
+    public static int KaraokeCardsPlayedThisTurn(Creature owner, ICombatState combatState)
+        => CombatManager.Instance.History.Entries.OfType<CardPlayStartedEntry>()
+            .Count(e => e.CardPlay.Card.Owner.Creature == owner
+                        && DundunCardTags.IsKaraoke(e.CardPlay.Card)
                         && e.HappenedThisTurn(combatState));
 }

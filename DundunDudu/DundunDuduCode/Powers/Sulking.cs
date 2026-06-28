@@ -1,4 +1,5 @@
 using DundunDudu.DundunDuduCode.Logic;
+using DundunDudu.DundunDuduCode.Relics;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -34,6 +35,13 @@ public static class Sulking
         for (int i = 0; i < times; i++)
         {
             await PowerCmd.Decrement(power);
+        }
+
+        // 小粉: every 闷气-clear event heals 2 (this is the single chokepoint for all clears).
+        if (owner.Player?.GetRelic<XiaoFen>() != null)
+        {
+            MainFile.Logger.Info("[小粉] 清空闷气 → +2 生命");
+            await CreatureCmd.Heal(owner, 2m);
         }
     }
 }

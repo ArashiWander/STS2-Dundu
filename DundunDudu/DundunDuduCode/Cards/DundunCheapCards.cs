@@ -81,6 +81,25 @@ public sealed class HighNote() : DundunCard(2, CardType.Attack, CardRarity.Rare,
     }
 }
 
+/// 安可 — Skill 1, 3 block; if you've played another 麦霸 card this turn, +4 block.
+public sealed class Encore() : DundunCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self), ITaggedDundunCard
+{
+    public IReadOnlySet<DundunCardTag> DundunTags => DundunCardTags.KaraokeSet;
+    public override bool GainsBlock => true;
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(3m, ValueProp.Move)];
+    protected override async Task OnPlay(PlayerChoiceContext ctx, CardPlay cardPlay)
+    {
+        // KaraokeCardsPlayedThisTurn counts 安可 itself (its CardPlayStartedEntry is already in history) → ≥2 means
+        // at least one OTHER 麦霸 card was played this turn.
+        decimal block = DynamicVars.Block.BaseValue;
+        if (CombatHistory.KaraokeCardsPlayedThisTurn(Owner.Creature, base.CombatState!) >= 2)
+        {
+            block += 4m;
+        }
+        await CreatureCmd.GainBlock(Owner.Creature, block, ValueProp.Move, cardPlay);
+    }
+}
+
 // ── 猪饲料系列 (Snack) ───────────────────────────────────────────────────────────────────────────────────────
 
 /// 正宗上海本帮糖醋排骨 — Skill 1, heal 6 + 清空2闷气.
